@@ -1,0 +1,10 @@
+.email {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+.email a {
+  color: #ccc;
+  text-decoration: underline;
+}
