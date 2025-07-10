@@ -75,3 +75,24 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+.about {
+  padding: 40px 20px;
+  background-color: #f0f0f0;
+  color: #111;
+  text-align: center;
+}
+
+.about h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
