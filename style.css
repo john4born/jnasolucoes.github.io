@@ -1,189 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
-body {
-  background-color: #ffffff;
-  color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-
-.logo {
-  max-height: 80px;
-  margin-bottom: 10px;
-}
-
-.hero {
-  background-color: #f5f5f5;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.services {
-  padding: 40px 20px;
-  background-color: #fff;
-}
-
-.services h3 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 1.8em;
-  color: #000;
-}
-
-.services ul {
-  list-style: none;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.services li {
-  padding: 10px 0;
-  font-size: 1.2em;
-  border-bottom: 1px solid #ccc;
-}
-
-footer {
-  background-color: #111;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-}
-
-footer a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.about {
-  padding: 40px 20px;
-  background-color: #f0f0f0;
-  color: #111;
-  text-align: center;
-}
-
-.about h3 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
-  color: #000;
-}
-
-.about p {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.1em;
-  line-height: 1.6;
-}
-
-.contact {
-  padding: 40px 20px;
-  background-color: #fff;
-  text-align: center;
-}
-
-.contact h3 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #000;
-}
-
-.contact form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact input,
-.contact textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-.contact button {
-  background-color: #111;
-  color: white;
-  border: none;
-  padding: 12px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.contact button:hover {
-  background-color: #333;
-}
-
-.portfolio {
-  background-color: #f5f5f5;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.portfolio h3 {
-  font-size: 1.8em;
-  margin-bottom: 30px;
-  color: #000;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h4 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  color: #111;
-}
-
-.card p {
-  font-size: 1em;
-  color: #555;
-}
-
-/* Header fixo moderno */
 .site-header {
   background-color: #000;
   color: #fff;
@@ -197,7 +11,7 @@ footer a:hover {
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -206,29 +20,33 @@ footer a:hover {
 .logo-area {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .logo-header {
-  height: 40px;
+  height: 40px; /* Era o que estava exagerado – agora mais discreto */
+  max-height: 40px;
 }
 
 .logo-text {
-  font-size: 1.3em;
-  font-weight: bold;
+  font-size: 1.1em;
+  font-weight: 600;
   color: #fff;
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-nav a {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 0.95em;
   transition: color 0.3s;
 }
 
@@ -236,9 +54,6 @@ footer a:hover {
   color: #00aaff;
 }
 
-/* Espaço extra no topo para compensar header fixo */
 body {
-  padding-top: 80px;
+  padding-top: 70px; /* Corrigido para compensar altura do novo menu */
 }
-
-
