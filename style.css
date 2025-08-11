@@ -6,17 +6,22 @@
 }
 
 body {
-  padding-top: 80px;
-  line-height: 1.6;
+  background-color: #ffffff;
   color: #333;
-  background-color: #fff;
+  line-height: 1.6;
+  padding-top: 80px;
 }
 
 a {
-  color: #0077cc;
+  color: #00aaff;
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header fixo */
 .site-header {
   position: fixed;
   top: 0;
@@ -56,7 +61,7 @@ a {
   color: #00aaff;
 }
 
-/* Seções principais */
+/* Seções */
 section {
   padding: 60px 20px;
   max-width: 1100px;
@@ -69,6 +74,7 @@ h2 {
   font-size: 2em;
 }
 
+/* Serviços com ícones */
 .icones-servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -82,10 +88,31 @@ h2 {
   border-radius: 8px;
   font-size: 1.1em;
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
 }
 
+.servico:hover {
+  transform: translateY(-5px);
+}
+
+/* Casos de sucesso (fundo alternado) */
+.cases {
+  background-color: #f5f5f5;
+}
+
+/* Provas sociais */
+.provas-sociais {
+  background-color: #ffffff;
+}
+
+/* Contato */
+.contato {
+  background-color: #f5f5f5;
+}
+
+/* Rodapé */
 footer {
-  background: #000;
+  background: #1e1e1e;
   color: #ccc;
   text-align: center;
   padding: 20px;
