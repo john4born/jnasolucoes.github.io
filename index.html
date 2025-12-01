@@ -1,64 +1,179 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JNA Soluções</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import { ArrowLeft, Phone, Check } from "lucide-react";
+import { useEffect } from "react";
 
-  <!-- TOPO COM MENU -->
-  <header class="site-header">
-    <div class="container">
-      <div class="logo-area">
-        <img src="logo.png" alt="JNA Soluções" class="logo-header" />
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#sobre">Sobre a JNA Soluções</a></li>
-          <li><a href="#solucoes">Soluções</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
+export default function About() {
+  // Set theme class on mount
+  useEffect(() => {
+    document.body.classList.add('theme-glass');
+    return () => {
+      document.body.classList.remove('theme-glass');
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/60 backdrop-blur-xl">
+        <div className="container mx-auto px-4 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <img src="/logo.png" alt="JNA Soluções" className="h-16 w-auto" />
+          </div>
+          
+          <div className="hidden md:flex items-center gap-1 bg-white/5 rounded-full p-1 border border-white/10 backdrop-blur-md">
+            <Link href="/glass">
+              <a className="px-5 py-2 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-all text-white/70">Home</a>
+            </Link>
+            <a href="#" className="px-5 py-2 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-all text-white/70">Serviços</a>
+            <a href="#" className="px-5 py-2 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-all text-white/70">Projetos</a>
+            <a href="#" className="px-5 py-2 rounded-full text-sm font-medium hover:bg-white/10 hover:text-white transition-all text-white/70">Contato</a>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <Link href="/glass">
+              <Button variant="ghost" size="sm" className="hidden md:flex rounded-full hover:bg-white/10 text-white/70 hover:text-white">
+                <ArrowLeft className="mr-2 h-4 w-4" /> Voltar
+              </Button>
+            </Link>
+            <Button className="rounded-full bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 border-0 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all">
+              <Phone className="mr-2 h-4 w-4" /> Fale Conosco
+            </Button>
+          </div>
+        </div>
       </nav>
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 md:pt-48 md:pb-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight tracking-tight">
+              Sobre a <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-secondary">JNA Soluções</span>
+            </h1>
+            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              Mais de 10 anos de expertise em infraestrutura de redes, consultoria e soluções inteligentes para empresas modernas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-20 relative">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="prose prose-invert max-w-none">
+            <div className="mb-12 p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md">
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                Na JNA Soluções, somos apaixonados por tecnologia e especializados em entregar infraestrutura de redes eficiente, segura e inteligente para pequenas e médias empresas. Nosso compromisso é transformar ambientes corporativos através de soluções modernas, estáveis e totalmente personalizadas.
+              </p>
+              
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                Com experiência sólida em Wi-Fi corporativo, cabeamento estruturado, arquitetura de redes e troubleshooting avançado, atuamos para garantir que sua empresa opere com máxima performance, sem interrupções e com total segurança. Utilizamos as melhores práticas do mercado e tecnologias de ponta para oferecer resultados consistentes, confiáveis e alinhados ao crescimento do seu negócio.
+              </p>
+            </div>
+
+            <h2 className="text-4xl font-bold mb-12 text-white">Nossos Pilares</h2>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              {/* Pilar 1 */}
+              <div className="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(6,182,212,0.2)]">
+                  <Check className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-white">Qualidade Técnica</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Projetos bem planejados, execução impecável e foco na alta performance.
+                </p>
+              </div>
+
+              {/* Pilar 2 */}
+              <div className="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(0,255,200,0.2)]">
+                  <Check className="h-6 w-6 text-secondary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-white">Transparência e Confiança</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Comunicação clara, processos estruturados e suporte contínuo.
+                </p>
+              </div>
+
+              {/* Pilar 3 */}
+              <div className="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500/20 to-blue-500/5 border border-blue-500/20 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(59,130,246,0.2)]">
+                  <Check className="h-6 w-6 text-blue-400" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-white">Soluções Inteligentes</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Entregamos redes dimensionadas para hoje e preparadas para o futuro.
+                </p>
+              </div>
+            </div>
+
+            <div className="p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-md mb-12">
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                Seja para otimizar sua estrutura existente ou iniciar um novo projeto do zero, a JNA Soluções está pronta para elevar o padrão de conectividade da sua empresa.
+              </p>
+              <p className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                Conectando pessoas, ideias e negócios. Essa é a nossa missão.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <Link href="/glass">
+                <Button className="rounded-full bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 border-0 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all h-14 px-8 text-lg font-semibold">
+                  Voltar para Home
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-white/10 bg-background/80 backdrop-blur-xl pt-20 pb-10 mt-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-12 mb-16">
+            <div className="col-span-1 md:col-span-2">
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-sm">
+                  JNA
+                </div>
+                <span className="font-bold text-xl tracking-tight text-white">Soluções</span>
+              </div>
+              <p className="text-muted-foreground max-w-sm mb-8 leading-relaxed">
+                Redefinindo os padrões de conectividade corporativa. Engenharia de precisão para um mundo sem fios.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-white mb-6">Serviços</h4>
+              <ul className="space-y-4 text-muted-foreground">
+                <li><a href="#" className="hover:text-primary transition-colors">Wi-Fi Corporativo</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Cabeamento Estruturado</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Fibra Óptica</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">CFTV IP</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-white mb-6">Empresa</h4>
+              <ul className="space-y-4 text-muted-foreground">
+                <li><a href="/about" className="hover:text-primary transition-colors">Sobre Nós</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Contato</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
+                <li><a href="#" className="hover:text-primary transition-colors">Carreiras</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-white/10 pt-8">
+            <p className="text-center text-muted-foreground text-sm">
+              © 2024 JNA Soluções. Todos os direitos reservados.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
-  </header>
-
-  <!-- ÍCONES DE SERVIÇOS -->
-  <section class="solucoes" id="solucoes">
-    <h2>Soluções que oferecemos</h2>
-    <div class="icones-servicos">
-      <div class="servico">📶 Wi-Fi Corporativo</div>
-      <div class="servico">🏠 Wi-Fi Residencial</div>
-      <div class="servico">🔌 Cabeamento Estruturado</div>
-      <div class="servico">📦 Comodato de Equipamentos</div>
-      <div class="servico">📡 Monitoramento e Resposta</div>
-    </div>
-  </section>
-
-  <!-- CASOS DE SUCESSO -->
-  <section class="cases" id="cases">
-    <h2>Casos de Sucesso</h2>
-    <p>Conheça alguns dos projetos mais impactantes realizados pela nossa equipe.</p>
-    <!-- Aqui você pode incluir cards de projetos reais no futuro -->
-  </section>
-
-  <!-- CANAL DE PROVAS SOCIAIS -->
-  <section class="provas-sociais">
-    <h2>Projetos em Destaque</h2>
-    <p>Conteúdo pensado em canais dos projetos realizados, mostrando na prática como entregamos valor para cada cliente.</p>
-  </section>
-
-  <!-- CONTATO -->
-  <section class="contato" id="contato">
-    <h2>Entre em Contato</h2>
-    <p>Email: <a href="mailto:comercial@jnasolucoes.com.br">comercial@jnasolucoes.com.br</a></p>
-  </section>
-
-  <footer>
-    <p>© 2025 JNA Soluções. Todos os direitos reservados.</p>
-  </footer>
-
-</body>
-</html>
-
+  );
+}
