@@ -2,119 +2,88 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #ffffff;
-  color: #333;
-  line-height: 1.6;
-  padding-top: 80px;
-}
-
-a {
-  color: #00aaff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Header fixo */
-.site-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #000;
+  background: #0b1c2c;
   color: #fff;
-  padding: 10px 20px;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31');
+  background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.logo-header {
-  height: 85px;
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.main-nav a {
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.main-nav a:hover {
-  color: #00aaff;
-}
-
-/* Seções */
-section {
-  padding: 60px 20px;
-  max-width: 1100px;
-  margin: 0 auto;
+  justify-content: center;
   text-align: center;
+  padding: 20px;
 }
 
-h2 {
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero h2 {
+  color: #4fc3f7;
+  margin: 15px 0;
+}
+
+.hero p {
   margin-bottom: 20px;
-  font-size: 2em;
 }
 
-/* Serviços com ícones */
-.icones-servicos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+.btn {
+  background: #25D366;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.servico {
-  background-color: #f5f5f5;
-  padding: 20px;
-  border-radius: 8px;
-  font-size: 1.1em;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
+.small {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
-.servico:hover {
-  transform: translateY(-5px);
-}
-
-/* Casos de sucesso (fundo alternado) */
-.cases {
-  background-color: #f5f5f5;
-}
-
-/* Provas sociais */
-.provas-sociais {
-  background-color: #ffffff;
-}
-
-/* Contato */
-.contato {
-  background-color: #f5f5f5;
-}
-
-/* Rodapé */
-footer {
-  background: #1e1e1e;
-  color: #ccc;
+.services {
+  padding: 60px 20px;
   text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.grid div {
+  background: #122b45;
   padding: 20px;
-  font-size: 0.9em;
+  border-radius: 10px;
+}
+
+.cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: #08121f;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  text-decoration: none;
 }
