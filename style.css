@@ -6,77 +6,142 @@
 }
 
 body {
-  background: #0b1c2c;
-  color: #fff;
+  background: #F8FAFC;
+  color: #1A1A1A;
 }
 
+/* NAVBAR */
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.navbar img {
+  height: 50px;
+}
+
+/* HERO */
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
               url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31');
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 20px;
+  color: white;
+}
+
+.hero-content {
+  max-width: 700px;
 }
 
 .hero h1 {
   font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .hero h2 {
-  color: #4fc3f7;
+  color: #4FC3F7;
   margin: 15px 0;
+  font-size: 1.5rem;
 }
 
 .hero p {
-  margin-bottom: 20px;
-}
-
-.btn {
-  background: #25D366;
-  color: white;
-  padding: 15px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 16px;
 }
 
 .small {
   display: block;
-  margin-top: 10px;
+  margin-top: 15px;
   font-size: 14px;
+  opacity: 0.9;
 }
 
+/* BUTTON */
+.btn {
+  background: #25D366;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* SERVICES */
 .services {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+  background: #ffffff;
 }
 
 .services h2 {
   margin-bottom: 40px;
+  font-size: 28px;
+  color: #0B3C5D;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
   gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.grid div {
-  background: #122b45;
-  padding: 20px;
-  border-radius: 10px;
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: left;
 }
 
-.cta {
+.card h3 {
+  color: #0B3C5D;
+  margin-bottom: 10px;
+}
+
+/* PROOF */
+.proof {
   text-align: center;
   padding: 60px 20px;
-  background: #08121f;
+  background: #F1F5F9;
 }
 
+.proof h2 {
+  color: #0B3C5D;
+  margin-bottom: 10px;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 80px 20px;
+  background: #0B3C5D;
+  color: white;
+}
+
+.cta h2 {
+  margin-bottom: 15px;
+}
+
+.cta .btn {
+  margin-top: 20px;
+}
+
+/* WHATSAPP FLOAT */
 .whatsapp {
   position: fixed;
   bottom: 20px;
