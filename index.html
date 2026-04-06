@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JNA Soluções | Infraestrutura de TI</title>
+    <title>JNA Soluções | Infraestrutura de TI Profissional</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,8 +17,9 @@
             
             <nav class="nav-menu">
                 <a href="#hero">Sobre nós</a>
+                <a href="#metodo">Metodologia</a>
                 <a href="#servicos">Soluções</a>
-                <a href="https://wa.me/5511981439140">Contato</a>
+                <a href="#faq">Dúvidas</a>
             </nav>
 
             <a href="https://wa.me/5511981439140" class="btn-outline">Falar com Especialista</a>
@@ -26,7 +28,7 @@
 
     <main>
         <section id="hero" class="hero">
-            <div class="container">
+            <div class="container" data-aos="fade-up">
                 <div class="hero-content-centered">
                     <span class="badge">Atendimento em São Paulo - SP</span>
                     <h1>Sua empresa perdendo dinheiro com <span class="highlight">internet lenta?</span></h1>
@@ -40,6 +42,39 @@
                     <div class="trust-indicators">
                         <span><i data-lucide="check-circle"></i> Suporte Especializado</span>
                         <span><i data-lucide="shield-check"></i> Rede 100% Segura</span>
+                        <span><i data-lucide="clock"></i> Atendimento Rápido</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodo" class="process">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>Nosso Processo de Trabalho</h2>
+                    <p>Como garantimos que sua rede nunca mais seja um problema.</p>
+                </div>
+                
+                <div class="process-grid">
+                    <div class="step" data-aos="fade-right" data-aos-delay="100">
+                        <div class="step-number">01</div>
+                        <h3>Diagnóstico</h3>
+                        <p>Análise profunda da sua infraestrutura atual para identificar gargalos.</p>
+                    </div>
+                    <div class="step" data-aos="fade-right" data-aos-delay="200">
+                        <div class="step-number">02</div>
+                        <h3>Projeto</h3>
+                        <p>Planejamento da rede ideal focada em alta performance e segurança.</p>
+                    </div>
+                    <div class="step" data-aos="fade-right" data-aos-delay="300">
+                        <div class="step-number">03</div>
+                        <h3>Execução</h3>
+                        <p>Instalação limpa e profissional, seguindo normas de cabeamento estruturado.</p>
+                    </div>
+                    <div class="step" data-aos="fade-right" data-aos-delay="400">
+                        <div class="step-number">04</div>
+                        <h3>Certificação</h3>
+                        <p>Testes de estresse e entrega de documentação completa da rede.</p>
                     </div>
                 </div>
             </div>
@@ -47,31 +82,31 @@
 
         <section id="servicos" class="services">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header" data-aos="fade-up">
                     <h2>Soluções completas para sua empresa</h2>
                     <p>Tecnologia de ponta para eliminar gargalos de rede.</p>
                 </div>
 
                 <div class="card-grid">
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in" data-aos-delay="100">
                         <div class="card-icon"><i data-lucide="wifi"></i></div>
                         <h3>Wi-Fi Corporativo</h3>
                         <p>Internet estável mesmo com alto volume de usuários conectados simultaneamente.</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in" data-aos-delay="200">
                         <div class="card-icon"><i data-lucide="layers"></i></div>
                         <h3>Cabeamento Estruturado</h3>
                         <p>Rede organizada que garante escalabilidade e facilidade na manutenção técnica.</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in" data-aos-delay="300">
                         <div class="card-icon"><i data-lucide="activity"></i></div>
                         <h3>Análise de Rede</h3>
                         <p>Diagnóstico preciso com ferramentas de monitoramento para identificar gargalos.</p>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-aos="zoom-in" data-aos-delay="400">
                         <div class="card-icon"><i data-lucide="monitor"></i></div>
                         <h3>Suporte e Monitoramento</h3>
                         <p>Monitoramento proativo 24/7 para evitar que sua operação sofra interrupções.</p>
@@ -80,25 +115,30 @@
             </div>
         </section>
 
-        <section class="stats">
-            <div class="container stats-grid">
-                <div class="stat-item">
-                    <span class="number">+50</span>
-                    <span class="label">Empresas Atendidas</span>
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2>Perguntas Frequentes</h2>
                 </div>
-                <div class="stat-item">
-                    <span class="number">90%</span>
-                    <span class="label">Redução de Quedas</span>
-                </div>
-                <div class="stat-item">
-                    <span class="number">24h</span>
-                    <span class="label">Prazo de Resposta</span>
+                <div class="faq-grid" data-aos="fade-up">
+                    <div class="faq-item">
+                        <h4>Vocês atendem residências ou só empresas?</h4>
+                        <p>Focamos em infraestrutura corporativa (empresas, comércios e escritórios) para garantir o padrão de qualidade industrial.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Em quanto tempo terei um técnico no local?</h4>
+                        <p>Nosso atendimento de urgência para São Paulo e região ocorre em até 24h úteis.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Vocês emitem nota fiscal para empresas?</h4>
+                        <p>Sim, somos uma empresa consolidada e todos os serviços acompanham NF-e e garantia em contrato.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="cta">
-            <div class="container">
+            <div class="container" data-aos="zoom-in">
                 <div class="cta-box">
                     <h2>Sua empresa não pode parar</h2>
                     <p>Fale agora com um especialista e receba um diagnóstico técnico hoje mesmo.</p>
@@ -114,8 +154,13 @@
         <p>&copy; 2026 JNA Soluções - Tecnologia e Infraestrutura.</p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         lucide.createIcons();
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
     </script>
 </body>
 </html>
