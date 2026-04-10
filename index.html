@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -16,7 +16,6 @@
             <img src="logo.png" alt="JNA Soluções" class="logo-top">
             <nav class="nav-menu">
                 <a href="#hero">Início</a>
-                <a href="#diferencial">Posicionamento</a>
                 <a href="#solucoes">Soluções</a>
                 <a href="https://wa.me/5511981439140">Contato</a>
             </nav>
@@ -29,32 +28,97 @@
             <div class="container" data-aos="fade-up">
                 <div class="hero-content-centered">
                     <span class="badge">
-                        <i data-lucide="globe"></i> Atendimento em Todo o Brasil (Remoto/Presencial)
+                        <i data-lucide="globe"></i> Atendimento em Todo o Brasil
                     </span>
                     <h1>Infraestrutura de rede e Wi-Fi corporativo com <span class="highlight">máxima performance</span></h1>
-                    <p class="hero-subtext">Sua empresa não pode parar por falhas de conexão. Projetamos, implantamos e mantemos redes seguras, rápidas e confiáveis.</p>
+                    <p class="hero-subtext">Sua empresa não pode parar por falhas de conexão. Projetamos, implantamos e mantemos redes seguras e confiáveis.</p>
                     
                     <div class="hero-actions">
                         <a href="https://wa.me/5511981439140" class="btn-primary">Solicitar diagnóstico da rede</a>
                         <a href="https://wa.me/5511981439140" class="btn-secondary">Falar com especialista</a>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="trust-indicators">
-                        <span><i data-lucide="monitor-check"></i> Suporte Remoto Imediato</span>
-                        <span><i data-lucide="shield-check"></i> Projetos 100% Seguros</span>
+        <section class="pain-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 class="white">Sua empresa enfrenta algum desses <span class="highlight-soft">problemas?</span></h2>
+                </div>
+                <div class="pain-list-premium">
+                    <div class="pain-card" data-aos="fade-up" data-aos-delay="100">
+                        <i data-lucide="wifi-off"></i>
+                        <p>Internet instável que trava sistemas e atrapalha o trabalho.</p>
+                    </div>
+                    <div class="pain-card" data-aos="fade-up" data-aos-delay="200">
+                        <i data-lucide="trending-down"></i>
+                        <p>Quedas que geram prejuízo e perda de produtividade imediata.</p>
+                    </div>
+                    <div class="pain-card" data-aos="fade-up" data-aos-delay="300">
+                        <i data-lucide="life-buoy"></i>
+                        <p>Falta de suporte eficiente quando você mais precisa.</p>
+                    </div>
+                </div>
+                <p class="pain-footer" data-aos="zoom-in">
+                    <i data-lucide="shield-alert" style="color: #FFD2D2; vertical-align: middle; margin-right: 8px; width: 24px; height: 24px;"></i>
+                    Sua operação não pode depender de uma rede falha.
+                </p>
+            </div>
+        </section>
+
+        <section id="solucoes" class="services-premium">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Soluções Profissionais e Objetivas</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="s-card" data-aos="fade-up">
+                        <h3>Infraestrutura de rede corporativa</h3>
+                        <p>Planejamento e implementação de redes estruturadas e seguras.</p>
+                    </div>
+                    <div class="s-card" data-aos="fade-up" data-aos-delay="100">
+                        <h3>Wi-Fi corporativo de alta performance</h3>
+                        <p>Cobertura eficiente e velocidade para ambientes empresariais.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="diferencial" class="positioning">
-            <div class="container grid-2">
-                <div class="pos-text" data-aos="fade-right">
-                    <h2>Especialistas em continuidade operacional</h2>
-                    <p>Atendimento técnico qualificado com foco em resolver problemas de forma definitiva. Entendemos que a estabilidade da rede é o coração da sua produtividade.</p>
+        <section class="cta-premium">
+            <div class="container">
+                <div class="cta-inner" data-aos="zoom-in">
+                    <h2>Uma rede instável impacta seus resultados.</h2>
+                    <a href="https://wa.me/5511981439140" class="btn-whatsapp-large">Entrar em contato agora</a>
                 </div>
-                <div class="pos-list" data-aos="fade-left">
-                    <div class="check-item"><i data-lucide="check-circle-2"></i> Atendimento especializado</div>
-                    <div class="check-item"><i data-lucide="check-circle-2"></i> Soluções escaláveis</div>
-                    <div class="check-item"><i data-lucide="check-circle-2"></i> Padrão profissional de implementação</div>
-                    <div class="check-item"><i data-lucide="check-
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 JNA Soluções</p>
+    </footer>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container cookie-content">
+            <p>Utilizamos cookies essenciais para sua melhor experiência. Ao navegar, você concorda.</p>
+            <button id="accept-cookies" class="btn-cookie">Li e aceito</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 800, once: true });
+        document.addEventListener("DOMContentLoaded", function() {
+            const banner = document.getElementById("cookie-banner");
+            const btn = document.getElementById("accept-cookies");
+            if (!localStorage.getItem("cookiesAceitos")) { banner.style.display = "block"; }
+            btn.addEventListener("click", function() {
+                localStorage.setItem("cookiesAceitos", "true");
+                banner.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>
