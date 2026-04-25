@@ -67,6 +67,41 @@
             </div>
         </section>
 
+        <section class="partners-carousel" style="padding: 40px 0; background: #ffffff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; overflow: hidden;">
+            <div class="container" style="text-align: center; margin-bottom: 30px;">
+                <span style="font-weight: 800; color: #001529; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Tecnologias de Alta Performance</span>
+            </div>
+            
+            <div class="carousel-wrapper" style="overflow: hidden; white-space: nowrap; position: relative;">
+                <div class="carousel-track" style="display: inline-flex; gap: 60px; animation: scroll-infinito 35s linear infinite; align-items: center;">
+                    
+                    <img src="images/logo_omada.png" alt="Omada" style="height: 40px;">
+                    <img src="images/logo_mikrotik.png" alt="MikroTik" style="height: 40px;">
+                    <img src="images/logo_unifi.png" alt="UniFi" style="height: 40px;">
+                    <img src="images/logo_cisco.png" alt="Cisco" style="height: 40px;">
+                    <img src="images/logo_meraki.png" alt="Meraki" style="height: 40px;">
+                    <img src="images/logo_aruba.png" alt="Aruba" style="height: 40px;">
+                    <img src="images/logo_juniper.png" alt="Juniper" style="height: 40px;">
+                    <img src="images/logo_extreme.png" alt="Extreme" style="height: 40px;">
+                    <img src="images/logo_instanton.png" alt="Instant On" style="height: 40px;">
+                    <img src="images/logo_intelbras.png" alt="Intelbras" style="height: 40px;">
+                    <img src="images/logo_cambium.png" alt="Cambium" style="height: 40px;">
+                    
+                    <img src="images/logo_omada.png" alt="Omada" style="height: 40px;">
+                    <img src="images/logo_mikrotik.png" alt="MikroTik" style="height: 40px;">
+                    <img src="images/logo_unifi.png" alt="UniFi" style="height: 40px;">
+                    <img src="images/logo_cisco.png" alt="Cisco" style="height: 40px;">
+                    <img src="images/logo_meraki.png" alt="Meraki" style="height: 40px;">
+                    <img src="images/logo_aruba.png" alt="Aruba" style="height: 40px;">
+                    <img src="images/logo_juniper.png" alt="Juniper" style="height: 40px;">
+                    <img src="images/logo_extreme.png" alt="Extreme" style="height: 40px;">
+                    <img src="images/logo_instanton.png" alt="Instant On" style="height: 40px;">
+                    <img src="images/logo_intelbras.png" alt="Intelbras" style="height: 40px;">
+                    <img src="images/logo_cambium.png" alt="Cambium" style="height: 40px;">
+                </div>
+            </div>
+        </section>
+
         <section class="pain-section">
             <div class="container">
                 <div class="section-header" data-aos="fade-up">
@@ -186,11 +221,13 @@
             </div>
         </section>
 
-        <section class="cta-premium">
+        <section class="cta-premium" style="padding: 60px 0; background-color: #7b94b0;">
             <div class="container">
-                <div class="cta-inner" data-aos="zoom-in">
-                    <h2>Uma rede instável impacta seus resultados.</h2>
-                    <a href="https://wa.me/5511981439140" class="btn-whatsapp-large">Entrar em contato via WhatsApp</a>
+                <div class="cta-inner" data-aos="zoom-in" style="background-color: #1a1e2e; padding: 40px 30px; border-radius: 16px; text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h2 style="color: white; font-size: 1.8rem; font-weight: 700; margin-bottom: 25px;">Uma rede instável impacta seus resultados.</h2>
+                    <a href="https://wa.me/5511981439140" class="btn-whatsapp-large" style="background-color: #25D366; color: white; padding: 16px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;">
+                        Entrar em contato via WhatsApp
+                    </a>
                 </div>
             </div>
         </section>
@@ -211,6 +248,16 @@
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        /* Estilos do Carrossel */
+        @keyframes scroll-infinito {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-11 * (40px + 60px))); } /* Quantidade de logos * (altura + gap) */
+        }
+        .carousel-track:hover { animation-play-state: paused; }
+        .carousel-track img { transition: transform 0.3s ease; cursor: pointer; }
+        .carousel-track img:hover { transform: scale(1.1); }
+    </style>
     <script>
         lucide.createIcons();
         AOS.init({ duration: 800, once: true });
