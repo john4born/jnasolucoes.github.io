@@ -21,6 +21,7 @@
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJXNZSLM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
     <header class="navbar">
         <div class="container nav-content">
             <img src="logo.png" alt="JNA Soluções" class="logo-top">
@@ -28,7 +29,7 @@
                 <a href="#hero">Início</a>
                 <a href="#diferencial">Posicionamento</a>
                 <a href="#solucoes">Soluções</a>
-                <a href="https://wa.me/5511981439140">Contato</a>
+                <a href="#contato">Contato</a>
             </nav>
             <a href="https://wa.me/5511981439140" class="btn-outline">Falar com especialista</a>
         </div>
@@ -46,7 +47,7 @@
                     
                     <div class="hero-actions">
                         <a href="https://wa.me/5511981439140" class="btn-primary">Solicitar diagnóstico da rede</a>
-                        <a href="https://wa.me/5511981439140" class="btn-secondary">Falar com especialista</a>
+                        <a href="#contato" class="btn-secondary">Enviar E-mail Comercial</a>
                     </div>
                 </div>
             </div>
@@ -121,12 +122,55 @@
                     <div class="s-card" data-aos="fade-up" data-aos-delay="400">
                         <i data-lucide="languages"></i>
                         <h3>Consultoria Técnica Bilíngue (Inglês)</h3>
-                        <p>Intermediação com fabricantes globais e suporte especializado para reuniões internacionais.</p>
+                        <p>Intermediação técnica global e suporte especializado para reuniões internacionais.</p>
                     </div>
                     <div class="s-card" data-aos="fade-up" data-aos-delay="500">
                         <i data-lucide="refresh-cw"></i>
                         <h3>Rede como Serviço (NaaS)</h3>
                         <p>Hardware, setup e gestão inclusos em uma mensalidade previsível. Elimine custos altos de CAPEX.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" style="padding: 80px 0; background-color: #ffffff;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                    <div class="contact-text" data-aos="fade-right">
+                        <h2 style="color: #001529; font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">
+                            Solicite um <span class="highlight">Orçamento</span>
+                        </h2>
+                        <p style="color: #666; margin-bottom: 30px;">
+                            Preencha o formulário e entraremos em contato em até 24h para entender sua necessidade técnica.
+                        </p>
+                        <div class="contact-info">
+                            <p style="font-weight: 600; color: #001529; margin-bottom: 10px;">
+                                <i data-lucide="mail" style="vertical-align: middle; margin-right: 10px; color: #007bff; width: 20px;"></i>
+                                contato@jnasolucoes.com.br
+                            </p>
+                            <p style="font-weight: 600; color: #001529;">
+                                <i data-lucide="map-pin" style="vertical-align: middle; margin-right: 10px; color: #007bff; width: 20px;"></i>
+                                Atendimento: Capital e Interior de SP
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container" data-aos="fade-left">
+                        <form action="https://formspree.io/f/myzjrzqa" method="POST" style="background: #f8f9fa; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                            <div style="margin-bottom: 15px;">
+                                <input type="text" name="nome" placeholder="Seu Nome / Empresa" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <input type="email" name="_replyto" placeholder="E-mail Corporativo" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <input type="tel" name="telefone" placeholder="WhatsApp" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <textarea name="mensagem" placeholder="Como podemos ajudar sua infraestrutura hoje?" rows="4" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="width: 100%; cursor: pointer; border: none;">Enviar Solicitação</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -146,14 +190,17 @@
             <div class="container">
                 <div class="cta-inner" data-aos="zoom-in">
                     <h2>Uma rede instável impacta seus resultados.</h2>
-                    <a href="https://wa.me/5511981439140" class="btn-whatsapp-large">Entrar em contato agora</a>
+                    <a href="https://wa.me/5511981439140" class="btn-whatsapp-large">Entrar em contato via WhatsApp</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2026 JNA Soluções - Infraestrutura de TI</p>
+    <footer class="footer" style="padding: 40px 0; background: #001529; color: white; text-align: center;">
+        <div class="container">
+            <p>&copy; 2026 JNA Soluções - Especialistas em Infraestrutura de Redes</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Atendimento presencial em São Paulo, Atibaia, Itu e Salto.</p>
+        </div>
     </footer>
 
     <div id="cookie-banner" class="cookie-banner">
@@ -168,7 +215,6 @@
         lucide.createIcons();
         AOS.init({ duration: 800, once: true });
         
-        // Lógica de Cookies
         document.addEventListener("DOMContentLoaded", function() {
             const banner = document.getElementById("cookie-banner");
             const btn = document.getElementById("accept-cookies");
@@ -176,6 +222,16 @@
             btn.addEventListener("click", function() {
                 localStorage.setItem("cookiesAceitos", "true");
                 banner.style.display = "none";
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
