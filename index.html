@@ -27,7 +27,7 @@
             <img src="logo.png" alt="JNA Soluções" class="logo-top">
             <nav class="nav-menu">
                 <a href="#hero">Início</a>
-                <a href="#diferencial">Posicionamento</a>
+                <a href="#quem-somos">Quem Somos</a>
                 <a href="#solucoes">Soluções</a>
                 <a href="#contato">Contato</a>
             </nav>
@@ -74,7 +74,6 @@
             
             <div class="carousel-wrapper" style="overflow: hidden; white-space: nowrap; position: relative;">
                 <div class="carousel-track" style="display: inline-flex; gap: 60px; animation: scroll-infinito 35s linear infinite; align-items: center;">
-                    
                     <img src="images/logo_omada.png" alt="Omada" style="height: 40px;">
                     <img src="images/logo_mikrotik.png" alt="MikroTik" style="height: 40px;">
                     <img src="images/logo_unifi.png" alt="UniFi" style="height: 40px;">
@@ -98,6 +97,48 @@
                     <img src="images/logo_instanton.png" alt="Instant On" style="height: 40px;">
                     <img src="images/logo_intelbras.png" alt="Intelbras" style="height: 40px;">
                     <img src="images/logo_cambium.png" alt="Cambium" style="height: 40px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Quem Somos / Autoridade Técnica -->
+        <section id="quem-somos" style="padding: 80px 0; background-color: #fcfcfc;">
+            <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
+                
+                <div class="about-image" data-aos="fade-right">
+                    <div style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1000&auto=format&fit=crop" alt="Infraestrutura de Alta Performance" style="width: 100%; display: block; filter: brightness(0.8);">
+                        
+                        <div style="position: absolute; top: 20px; left: 20px; background: rgba(0, 123, 255, 0.9); color: white; padding: 15px 25px; border-radius: 8px; backdrop-filter: blur(5px);">
+                            <span style="font-size: 1.5rem; font-weight: 900; display: block;">+10 ANOS</span>
+                            <span style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px;">de mercado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text" data-aos="fade-left">
+                    <span style="color: #007bff; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; display: block; margin-bottom: 15px;">Autoridade em Conectividade</span>
+                    <h2 style="color: #001529; font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 25px;">Experiência sólida para garantir a sua <span style="color: #007bff;">continuidade.</span></h2>
+                    
+                    <p style="color: #555; line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px;">
+                        Com mais de uma década de atuação na linha de frente da infraestrutura tecnológica, a <strong>JNA Soluções</strong> consolidou-se como referência em estabilidade e performance para o setor corporativo.
+                    </p>
+                    
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 30px;">
+                        Nossa trajetória é pautada pela entrega de redes robustas, utilizando protocolos avançados e hardware de ponta como <strong>Cisco, MikroTik e Ubiquiti</strong>. Não apenas instalamos equipamentos; projetamos o alicerce digital que permite sua empresa crescer sem gargalos técnicos.
+                    </p>
+
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; color: #001529; font-weight: 600;">
+                            <i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Expertise em Ambientes Críticos
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; color: #001529; font-weight: 600;">
+                            <i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Projetos Seguros e Escaláveis
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; color: #001529; font-weight: 600;">
+                            <i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Suporte Técnico de Alto Nível
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -249,10 +290,9 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
-        /* Estilos do Carrossel */
         @keyframes scroll-infinito {
             from { transform: translateX(0); }
-            to { transform: translateX(calc(-11 * (40px + 60px))); } /* Quantidade de logos * (altura + gap) */
+            to { transform: translateX(calc(-11 * (40px + 60px))); }
         }
         .carousel-track:hover { animation-play-state: paused; }
         .carousel-track img { transition: transform 0.3s ease; cursor: pointer; }
