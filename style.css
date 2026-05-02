@@ -31,13 +31,8 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
 
 .badge { background: #E0E7FF; color: var(--primary); padding: 10px 20px; border-radius: 50px; font-size: 14px; font-weight: 800; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 25px; border: 1px solid rgba(0, 102, 255, 0.1); }
 
-/* CARROSSEL PARCEIROS (LOGOS) */
-@keyframes scroll-infinito {
-    from { transform: translateX(0); }
-    to { transform: translateX(calc(-11 * (40px + 60px))); }
-}
-.carousel-track { display: inline-flex; gap: 60px; animation: scroll-infinito 35s linear infinite; align-items: center; }
-.carousel-track:hover { animation-play-state: paused; }
+.trust-indicators { display: flex; justify-content: center; gap: 30px; margin-top: 40px; font-weight: 600; color: var(--dark-blue); font-size: 15px; opacity: 0.8; }
+.trust-indicators i { color: var(--primary); stroke-width: 2.5; }
 
 /* POSITIONING */
 .positioning { padding: 100px 0; background: white; }
@@ -56,25 +51,13 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
 .pain-card p { font-size: 19px; font-weight: 600; }
 .pain-footer { font-size: 24px; font-weight: 900; color: white; }
 
-/* SERVICES */
+/* SERVICES (AJUSTADO PARA A GRADE DE 4 CARDS) */
 .services-premium { padding: 100px 0; background: white; border-radius: 60px 60px 0 0; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 50px; }
 .s-card { padding: 40px 30px; background: #F8FAFC; border-radius: 20px; border-left: 5px solid var(--primary); transition: 0.3s; display: flex; flex-direction: column; gap: 10px; }
 .s-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .s-card h3 { color: var(--dark-blue); font-weight: 800; font-size: 19px; line-height: 1.2; }
 .s-card p { font-size: 15px; color: var(--text-main); }
-
-/* TRECHO SEGURO PARA AVALIAÇÕES (ESTILO TRUSTINDEX) */
-.reviews-container { overflow: hidden; width: 100%; padding: 20px 0; }
-.reviews-track { display: flex; gap: 20px; width: max-content; animation: scroll-reviews 45s linear infinite; }
-.reviews-track:hover { animation-play-state: paused; }
-@keyframes scroll-reviews { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-340px * 7)); } }
-.review-card { flex: 0 0 320px; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.06); min-height: 260px; border: 1px solid #f0f0f0; display: flex; flex-direction: column; justify-content: space-between; }
-.rev-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
-.rev-client { display: flex; align-items: center; gap: 12px; }
-.rev-client img { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; }
-.rev-name { font-weight: 700; color: #000; font-size: 0.95rem; }
-.rev-stars { color: #ffc107; font-size: 1rem; margin-top: 4px; }
 
 /* CTA */
 .cta-premium { padding: 100px 0; }
@@ -102,4 +85,5 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
     .hero-actions { flex-direction: column; gap: 15px; }
     .grid-2, .services-grid, .cookie-content { grid-template-columns: 1fr; flex-direction: column; text-align: center; }
     .nav-menu { display: none; }
+    .trust-indicators { flex-direction: column; gap: 15px; }
 }
