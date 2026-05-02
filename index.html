@@ -17,6 +17,75 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=8">
+
+    <style>
+        @keyframes scroll-infinito {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(-11 * (40px + 60px))); }
+        }
+        .carousel-track:hover { animation-play-state: paused; }
+        .carousel-track img { transition: transform 0.3s ease; cursor: pointer; filter: grayscale(1) opacity(0.7); }
+        .carousel-track img:hover { transform: scale(1.1); filter: grayscale(0) opacity(1); }
+
+        /* Estilização do Novo Carrossel de Avaliações (Item 8 do Backlog) */
+        .reviews-wrapper::-webkit-scrollbar { height: 6px; }
+        .reviews-wrapper::-webkit-scrollbar-thumb { background: #007bff; border-radius: 10px; }
+        
+        .review-card {
+            flex: 0 0 320px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            scroll-snap-align: start;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .review-header img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #f0f0f0;
+        }
+
+        .review-header strong {
+            display: block;
+            color: #001529;
+            font-size: 0.95rem;
+        }
+
+        .stars {
+            color: #ffc107;
+            font-size: 0.75rem;
+        }
+
+        .review-card p {
+            color: #555;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .google-tag {
+            font-size: 0.7rem;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    </style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJXNZSLM"
@@ -36,7 +105,6 @@
     </header>
 
     <main>
-        <!-- HERO REFORMULADA: FOCO EM CONVERSÃO E DIAGNÓSTICO -->
         <section id="hero" class="hero">
             <div class="container" data-aos="fade-up">
                 <div class="hero-content-centered">
@@ -47,7 +115,6 @@
                     <p class="hero-subtext">Não deixe sua operação parar. Realizamos uma análise técnica completa da sua infraestrutura de rede e Wi-Fi sem custo inicial para empresas.</p>
                     
                     <div class="hero-actions">
-                        <!-- CTA Principal focado no Diagnóstico -->
                         <a href="https://wa.me/5511981439140?text=Olá! Gostaria de agendar o diagnóstico gratuito da rede para minha empresa." class="btn-primary">
                             <i data-lucide="calendar"></i> Agendar Diagnóstico Gratuito
                         </a>
@@ -109,44 +176,25 @@
             </div>
         </section>
 
-        <!-- Seção Quem Somos / Autoridade Técnica Local -->
         <section id="quem-somos" style="padding: 80px 0; background-color: #fcfcfc;">
             <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
                 <div class="about-image" data-aos="fade-right">
                     <div style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); background-color: #1a1e2e; min-height: 350px; display: flex; align-items: center; justify-content: center;">
-                        <img src="images/quem-somos.avif" 
-                             alt="Infraestrutura de Alta Performance" 
-                             style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.6;">
-                        
+                        <img src="images/quem-somos.avif" alt="Infraestrutura de Alta Performance" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.6;">
                         <div style="position: absolute; bottom: 30px; left: 30px; background: #007bff; color: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 2;">
                             <span style="font-size: 2rem; font-weight: 900; display: block; line-height: 1;">+10 ANOS</span>
                             <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Experiência Técnica</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="about-text" data-aos="fade-left">
                     <span style="color: #007bff; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; display: block; margin-bottom: 15px;">Autoridade em Conectividade</span>
                     <h2 style="color: #001529; font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 25px;">Experiência sólida para garantir a sua <span style="color: #007bff;">continuidade.</span></h2>
-                    
-                    <p style="color: #555; line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px;">
-                        Com mais de uma década de atuação na linha de frente da infraestrutura tecnológica, a <strong>JNA Soluções</strong> consolidou-se como referência em estabilidade e performance para o setor corporativo.
-                    </p>
-                    
-                    <p style="color: #555; line-height: 1.8; margin-bottom: 30px;">
-                        Nossa trajetória é pautada pela entrega de redes robustas, utilizando protocolos avançados e hardware de ponta como <strong>Cisco, MikroTik e Ubiquiti</strong>. Não apenas instalamos equipamentos; projetamos o alicerce digital que permite sua empresa crescer sem gargalos técnicos.
-                    </p>
-
+                    <p style="color: #555; line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px;">Com mais de uma década de atuação na linha de frente da infraestrutura tecnológica, a <strong>JNA Soluções</strong> consolidou-se como referência em estabilidade e performance para o setor corporativo.</p>
                     <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; color: #001529; font-weight: 600;">
-                            <i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Expertise em Ambientes Críticos
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; color: #001529; font-weight: 600;">
-                            <i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Projetos Seguros e Escaláveis
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 10px; color: #001529; font-weight: 600;">
-                            <i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Suporte Técnico de Alto Nível
-                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; color: #001529; font-weight: 600;"><i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Expertise em Ambientes Críticos</li>
+                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; color: #001529; font-weight: 600;"><i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Projetos Seguros e Escaláveis</li>
+                        <li style="display: flex; align-items: center; gap: 10px; color: #001529; font-weight: 600;"><i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Suporte Técnico de Alto Nível</li>
                     </ul>
                 </div>
             </div>
@@ -158,62 +206,23 @@
                     <h2 class="white">Sua empresa enfrenta algum desses <span class="highlight-soft">problemas?</span></h2>
                 </div>
                 <div class="pain-list-premium">
-                    <div class="pain-card" data-aos="fade-up">
-                        <i data-lucide="wifi-off"></i>
-                        <p>Internet instável e sistemas lentos.</p>
-                    </div>
-                    <div class="pain-card" data-aos="fade-up" data-aos-delay="100">
-                        <i data-lucide="trending-down"></i>
-                        <p>Quedas que geram prejuízo imediato.</p>
-                    </div>
-                    <div class="pain-card" data-aos="fade-up" data-aos-delay="200">
-                        <i data-lucide="life-buoy"></i>
-                        <p>Falta de suporte quando você mais precisa.</p>
-                    </div>
+                    <div class="pain-card" data-aos="fade-up"><i data-lucide="wifi-off"></i><p>Internet instável e sistemas lentos.</p></div>
+                    <div class="pain-card" data-aos="fade-up" data-aos-delay="100"><i data-lucide="trending-down"></i><p>Quedas que geram prejuízo imediato.</p></div>
+                    <div class="pain-card" data-aos="fade-up" data-aos-delay="200"><i data-lucide="life-buoy"></i><p>Falta de suporte quando você mais precisa.</p></div>
                 </div>
-                <p class="pain-footer" data-aos="zoom-in">
-                    <i data-lucide="shield-alert" style="color: #FFD2D2; vertical-align: middle; margin-right: 8px; width: 24px; height: 24px;"></i>
-                    Sua operação não pode depender de uma rede falha.
-                </p>
             </div>
         </section>
 
         <section id="solucoes" class="services-premium">
             <div class="container">
-                <div class="section-header">
-                    <h2>Soluções Profissionais e Objetivas</h2>
-                </div>
+                <div class="section-header"><h2>Soluções Profissionais e Objetivas</h2></div>
                 <div class="services-grid">
-                    <div class="s-card" data-aos="fade-up">
-                        <i data-lucide="wifi"></i>
-                        <h3>Wi-Fi Corporativo de Alta Performance</h3>
-                        <p>Conexão estável e rápida para empresas e clientes.</p>
-                    </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="100">
-                        <i data-lucide="cable"></i>
-                        <h3>Cabeamento Estruturado CAT6 e 6A</h3>
-                        <p>Redes cabeadas organizadas e preparadas para altas taxas.</p>
-                    </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="200">
-                        <i data-lucide="activity"></i>
-                        <h3>Análise e Diagnóstico de Rede</h3>
-                        <p>Diagnóstico preciso para identificar e eliminar gargalos.</p>
-                    </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="300">
-                        <i data-lucide="monitor"></i>
-                        <h3>Suporte e Monitoramento Proativo</h3>
-                        <p>Manutenção preventiva para evitar falhas inesperadas.</p>
-                    </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="400">
-                        <i data-lucide="languages"></i>
-                        <h3>Consultoria Técnica Bilíngue (Inglês)</h3>
-                        <p>Intermediação técnica global e suporte especializado para reuniões internacionais.</p>
-                    </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="500">
-                        <i data-lucide="refresh-cw"></i>
-                        <h3>Rede como Serviço (NaaS)</h3>
-                        <p>Hardware, setup e gestão inclusos em uma mensalidade previsível. Elimine custos altos de CAPEX.</p>
-                    </div>
+                    <div class="s-card" data-aos="fade-up"><i data-lucide="wifi"></i><h3>Wi-Fi Corporativo de Alta Performance</h3><p>Conexão estável e rápida para empresas e clientes.</p></div>
+                    <div class="s-card" data-aos="fade-up" data-aos-delay="100"><i data-lucide="cable"></i><h3>Cabeamento Estruturado CAT6 e 6A</h3><p>Redes cabeadas organizadas e preparadas para altas taxas.</p></div>
+                    <div class="s-card" data-aos="fade-up" data-aos-delay="200"><i data-lucide="activity"></i><h3>Análise e Diagnóstico de Rede</h3><p>Diagnóstico preciso para identificar e eliminar gargalos.</p></div>
+                    <div class="s-card" data-aos="fade-up" data-aos-delay="300"><i data-lucide="monitor"></i><h3>Suporte e Monitoramento Proativo</h3><p>Manutenção preventiva para evitar falhas inesperadas.</p></div>
+                    <div class="s-card" data-aos="fade-up" data-aos-delay="400"><i data-lucide="languages"></i><h3>Consultoria Técnica Bilíngue (Inglês)</h3><p>Intermediação técnica global e suporte especializado.</p></div>
+                    <div class="s-card" data-aos="fade-up" data-aos-delay="500"><i data-lucide="refresh-cw"></i><h3>Rede como Serviço (NaaS)</h3><p>Hardware, setup e gestão inclusos em uma mensalidade previsível.</p></div>
                 </div>
             </div>
         </section>
@@ -222,38 +231,19 @@
             <div class="container">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
                     <div class="contact-text" data-aos="fade-right">
-                        <h2 style="color: #001529; font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">
-                            Solicite um <span class="highlight">Orçamento</span>
-                        </h2>
-                        <p style="color: #666; margin-bottom: 30px;">
-                            Preencha o formulário e entraremos em contato em até 24h para entender sua necessidade técnica.
-                        </p>
+                        <h2 style="color: #001529; font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Solicite um <span class="highlight">Orçamento</span></h2>
+                        <p style="color: #666; margin-bottom: 30px;">Preencha o formulário e entraremos em contato em até 24h.</p>
                         <div class="contact-info">
-                            <p style="font-weight: 600; color: #001529; margin-bottom: 10px;">
-                                <i data-lucide="mail" style="vertical-align: middle; margin-right: 10px; color: #007bff; width: 20px;"></i>
-                                contato@jnasolucoes.com.br
-                            </p>
-                            <p style="font-weight: 600; color: #001529;">
-                                <i data-lucide="globe" style="vertical-align: middle; margin-right: 10px; color: #007bff; width: 20px;"></i>
-                                Atendimento em todo o Brasil
-                            </p>
+                            <p style="font-weight: 600; color: #001529; margin-bottom: 10px;"><i data-lucide="mail" style="color: #007bff; width: 20px;"></i> contato@jnasolucoes.com.br</p>
+                            <p style="font-weight: 600; color: #001529;"><i data-lucide="globe" style="color: #007bff; width: 20px;"></i> Atendimento em todo o Brasil</p>
                         </div>
                     </div>
-
                     <div class="contact-form-container" data-aos="fade-left">
                         <form action="https://formspree.io/f/myzjrzqa" method="POST" style="background: #f8f9fa; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                            <div style="margin-bottom: 15px;">
-                                <input type="text" name="nome" placeholder="Seu Nome / Empresa" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                            </div>
-                            <div style="margin-bottom: 15px;">
-                                <input type="email" name="_replyto" placeholder="E-mail Corporativo" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                            </div>
-                            <div style="margin-bottom: 15px;">
-                                <input type="tel" name="telefone" placeholder="WhatsApp" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                            </div>
-                            <div style="margin-bottom: 20px;">
-                                <textarea name="mensagem" placeholder="Como podemos ajudar sua infraestrutura hoje?" rows="4" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
-                            </div>
+                            <div style="margin-bottom: 15px;"><input type="text" name="nome" placeholder="Seu Nome / Empresa" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></div>
+                            <div style="margin-bottom: 15px;"><input type="email" name="_replyto" placeholder="E-mail Corporativo" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></div>
+                            <div style="margin-bottom: 15px;"><input type="tel" name="telefone" placeholder="WhatsApp" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></div>
+                            <div style="margin-bottom: 20px;"><textarea name="mensagem" placeholder="Como podemos ajudar sua infraestrutura hoje?" rows="4" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></textarea></div>
                             <button type="submit" class="btn-primary" style="width: 100%; cursor: pointer; border: none;">Enviar Solicitação</button>
                         </form>
                     </div>
@@ -261,13 +251,84 @@
             </div>
         </section>
 
-        <section id="avaliacoes" style="padding: 80px 0; background-color: #f9f9f9;">
+        <!-- SEÇÃO AVALIAÇÕES ATUALIZADA (BLINDADA E NATIVA) -->
+        <section id="avaliacoes" style="padding: 80px 0; background-color: #f9f9f9; overflow: hidden;">
             <div class="container" data-aos="fade-up">
-                <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-                    <h2 style="color: #001529; font-size: 2rem; font-weight: 800;">O que nossos clientes dizem no Google</h2>
+                <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                    <h2 style="color: #001529; font-size: 2.2rem; font-weight: 800;">O que nossos clientes dizem no Google</h2>
                     <p style="color: #666;">Confiança comprovada por quem utiliza nossas soluções de infraestrutura.</p>
                 </div>
-                <script defer async src='https://cdn.trustindex.io/loader.js?cff3559702e12814827653aad8e'></script>
+                
+                <div class="reviews-wrapper" style="overflow-x: auto; display: flex; gap: 20px; padding: 10px 10px 40px 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="images/cliente-carolina.png" alt="Carolina Cantero">
+                            <div><strong>Carolina Cantero</strong><div class="stars">★★★★★</div></div>
+                        </div>
+                        <p>"Excelente Suporte!. Rapidez e agilidade no atendimento. Pessoal cordial e sempre disposto a ajudar!!! Super Recomendo."</p>
+                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="images/cliente-vinicius.png" alt="Vinicius Dos Santos">
+                            <div><strong>Vinicius Dos Santos</strong><div class="stars">★★★★★</div></div>
+                        </div>
+                        <p>"Excelente atendimento! A equipe demonstra muito profissionalismo, atenção aos detalhes e compromisso com a satisfação do cliente. Desde o primeiro contato fui muito bem atendido. Recomendo fortemente!"</p>
+                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="images/cliente-gladson.png" alt="Gladson Valerio">
+                            <div><strong>Gladson Valerio</strong><div class="stars">★★★★★</div></div>
+                        </div>
+                        <p>"Uma empresa que possui excelência no atendimento, resolvendo todos os problemas de forma técnica. Com conhecimento avançado em redes corporativas Ubiquiti, eu a indico para serviços de tecnologia"</p>
+                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="images/cliente-keren.png" alt="Kéren Gonçalves">
+                            <div><strong>Kéren Gonçalves</strong><div class="stars">★★★★★</div></div>
+                        </div>
+                        <p>"Empresa séria, presta um bom atendimento, atento aos detalhes do ambiente que precisa de ajuste. Recomendo para todos que precisam de qualquer suporte para T.I, principalmente redes e Wi-Fi."</p>
+                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="images/cliente-pedro.png" alt="Pedro De Biase">
+                            <div><strong>Pedro De Biase</strong><div class="stars">★★★★★</div></div>
+                        </div>
+                        <p>"Empresa excelente, tanto na parte de construção da infraestrutura com o serviço de suporte. Sempre responsivo, atencioso e fazendo o acompanhamento."</p>
+                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <img src="images/cliente-kauan.png" alt="Kaua Matheus">
+                            <div><strong>Kaua Matheus</strong><div class="stars">★★★★★</div></div>
+                        </div>
+                        <p>"Profissional atencioso, que passa confiança, que faz vc se sentir tranquilo de que o seu problema será resolvido!!"</p>
+                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <!-- Reaproveitando a foto do Vinicius para Marcos Vinícius -->
+                            <img src="images/cliente-vinicius.png" alt="Marcos Vinícius">
+                            <div><strong>Marcos Vinícius</strong><div class="stars">★★★★★</div></div>
+                        </div>
+                        <p>"Ótimo atendimento e uma empresa muito atenciosa! Recomendo!!!!"</p>
+                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
+                    </div>
+
+                </div>
+                <div style="text-align: center; margin-top: 10px; color: #999; font-size: 0.8rem;">
+                    <i data-lucide="arrow-left-right" style="width: 14px; vertical-align: middle;"></i> Arraste para o lado para ler mais
+                </div>
             </div>
         </section>
 
@@ -275,9 +336,7 @@
             <div class="container">
                 <div class="cta-inner" data-aos="zoom-in" style="background-color: #1a1e2e; padding: 40px 30px; border-radius: 16px; text-align: center; max-width: 800px; margin: 0 auto;">
                     <h2 style="color: white; font-size: 1.8rem; font-weight: 700; margin-bottom: 25px;">Uma rede instável impacta seus resultados.</h2>
-                    <a href="https://wa.me/5511981439140" class="btn-whatsapp-large" style="background-color: #25D366; color: white; padding: 16px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;">
-                        Entrar em contato via WhatsApp
-                    </a>
+                    <a href="https://wa.me/5511981439140" class="btn-whatsapp-large" style="background-color: #25D366; color: white; padding: 16px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;">Entrar em contato via WhatsApp</a>
                 </div>
             </div>
         </section>
@@ -286,7 +345,6 @@
     <footer class="footer" style="padding: 40px 0; background: #001529; color: white; text-align: center;">
         <div class="container">
             <p>&copy; 2026 JNA Soluções - Especialistas em Infraestrutura de Redes</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Atendimento especializado em todo o Brasil.</p>
         </div>
     </footer>
 
@@ -298,15 +356,6 @@
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <style>
-        @keyframes scroll-infinito {
-            from { transform: translateX(0); }
-            to { transform: translateX(calc(-11 * (40px + 60px))); }
-        }
-        .carousel-track:hover { animation-play-state: paused; }
-        .carousel-track img { transition: transform 0.3s ease; cursor: pointer; }
-        .carousel-track img:hover { transform: scale(1.1); }
-    </style>
     <script>
         lucide.createIcons();
         AOS.init({ duration: 800, once: true });
@@ -325,9 +374,7 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
+                if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
             });
         });
     </script>
