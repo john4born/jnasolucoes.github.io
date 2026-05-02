@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style.css?v=8">
 
     <style>
+        /* Estilos do Carrossel de Parceiros */
         @keyframes scroll-infinito {
             from { transform: translateX(0); }
             to { transform: translateX(calc(-11 * (40px + 60px))); }
@@ -27,63 +28,101 @@
         .carousel-track img { transition: transform 0.3s ease; cursor: pointer; filter: grayscale(1) opacity(0.7); }
         .carousel-track img:hover { transform: scale(1.1); filter: grayscale(0) opacity(1); }
 
-        /* Estilização do Novo Carrossel de Avaliações (Item 8 do Backlog) */
-        .reviews-wrapper::-webkit-scrollbar { height: 6px; }
-        .reviews-wrapper::-webkit-scrollbar-thumb { background: #007bff; border-radius: 10px; }
-        
+        /* --- ESTILO TRUSTINDEX (AVALIAÇÕES) --- */
+        .reviews-container {
+            overflow: hidden;
+            width: 100%;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .reviews-track {
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: scroll-reviews 45s linear infinite; /* Movimento automático lento */
+        }
+
+        .reviews-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll-reviews {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-340px * 7)); } /* 7 é o número de cards originais */
+        }
+
         .review-card {
             flex: 0 0 320px;
             background: white;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            scroll-snap-align: start;
-            border: 1px solid #eee;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            min-height: 260px;
+            border: 1px solid #f0f0f0;
         }
 
         .review-header {
             display: flex;
-            align-items: center;
-            gap: 12px;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 15px;
         }
 
-        .review-header img {
+        .client-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .client-info img {
             width: 45px;
             height: 45px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid #f0f0f0;
         }
 
-        .review-header strong {
-            display: block;
-            color: #001529;
+        .client-name {
+            font-weight: 700;
+            color: #000;
             font-size: 0.95rem;
+            display: block;
         }
 
-        .stars {
-            color: #ffc107;
+        .review-date {
             font-size: 0.75rem;
+            color: #888;
+            font-weight: 400;
         }
 
-        .review-card p {
-            color: #555;
+        .google-icon-top {
+            width: 18px;
+            height: 18px;
+        }
+
+        .stars-row {
+            color: #ffc107;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 2px;
+        }
+
+        .review-body {
+            color: #444;
             font-size: 0.9rem;
             line-height: 1.6;
-            font-style: italic;
-            margin-bottom: 15px;
+            flex-grow: 1;
         }
 
-        .google-tag {
-            font-size: 0.7rem;
-            color: #aaa;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+        .read-more {
+            margin-top: 15px;
+            color: #999;
+            font-size: 0.85rem;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -120,10 +159,6 @@
                         </a>
                         <a href="#solucoes" class="btn-secondary">Conhecer Soluções</a>
                     </div>
-                    
-                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 20px;">
-                        <i data-lucide="info" style="width: 14px; vertical-align: middle;"></i> Oferta exclusiva para empresas e condomínios.
-                    </p>
                 </div>
             </div>
         </section>
@@ -146,9 +181,8 @@
             <div class="container" style="text-align: center; margin-bottom: 30px;">
                 <span style="font-weight: 800; color: #001529; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6;">Tecnologias de Alta Performance</span>
             </div>
-            
-            <div class="carousel-wrapper" style="overflow: hidden; white-space: nowrap; position: relative;">
-                <div class="carousel-track" style="display: inline-flex; gap: 60px; animation: scroll-infinito 35s linear infinite; align-items: center;">
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
                     <img src="images/logo_omada.png" alt="Omada" style="height: 40px;">
                     <img src="images/logo_mikrotik.png" alt="MikroTik" style="height: 40px;">
                     <img src="images/logo_unifi.png" alt="UniFi" style="height: 40px;">
@@ -160,18 +194,9 @@
                     <img src="images/logo_instanton.png" alt="Instant On" style="height: 40px;">
                     <img src="images/logo_intelbras.png" alt="Intelbras" style="height: 40px;">
                     <img src="images/logo_cambium.png" alt="Cambium" style="height: 40px;">
-                    
                     <img src="images/logo_omada.png" alt="Omada" style="height: 40px;">
                     <img src="images/logo_mikrotik.png" alt="MikroTik" style="height: 40px;">
                     <img src="images/logo_unifi.png" alt="UniFi" style="height: 40px;">
-                    <img src="images/logo_cisco.png" alt="Cisco" style="height: 40px;">
-                    <img src="images/logo_meraki.png" alt="Meraki" style="height: 40px;">
-                    <img src="images/logo_aruba.png" alt="Aruba" style="height: 40px;">
-                    <img src="images/logo_juniper.png" alt="Juniper" style="height: 40px;">
-                    <img src="images/logo_extreme.png" alt="Extreme" style="height: 40px;">
-                    <img src="images/logo_instanton.png" alt="Instant On" style="height: 40px;">
-                    <img src="images/logo_intelbras.png" alt="Intelbras" style="height: 40px;">
-                    <img src="images/logo_cambium.png" alt="Cambium" style="height: 40px;">
                 </div>
             </div>
         </section>
@@ -180,49 +205,157 @@
             <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px; align-items: center;">
                 <div class="about-image" data-aos="fade-right">
                     <div style="position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); background-color: #1a1e2e; min-height: 350px; display: flex; align-items: center; justify-content: center;">
-                        <img src="images/quem-somos.avif" alt="Infraestrutura de Alta Performance" style="width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.6;">
-                        <div style="position: absolute; bottom: 30px; left: 30px; background: #007bff; color: white; padding: 20px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); z-index: 2;">
+                        <img src="images/quem-somos.avif" alt="Infraestrutura" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                        <div style="position: absolute; bottom: 30px; left: 30px; background: #007bff; color: white; padding: 20px; border-radius: 12px;">
                             <span style="font-size: 2rem; font-weight: 900; display: block; line-height: 1;">+10 ANOS</span>
-                            <span style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700;">Experiência Técnica</span>
+                            <span style="font-size: 0.8rem; text-transform: uppercase; font-weight: 700;">Experiência Técnica</span>
                         </div>
                     </div>
                 </div>
                 <div class="about-text" data-aos="fade-left">
-                    <span style="color: #007bff; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; display: block; margin-bottom: 15px;">Autoridade em Conectividade</span>
-                    <h2 style="color: #001529; font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 25px;">Experiência sólida para garantir a sua <span style="color: #007bff;">continuidade.</span></h2>
-                    <p style="color: #555; line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px;">Com mais de uma década de atuação na linha de frente da infraestrutura tecnológica, a <strong>JNA Soluções</strong> consolidou-se como referência em estabilidade e performance para o setor corporativo.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0;">
-                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; color: #001529; font-weight: 600;"><i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Expertise em Ambientes Críticos</li>
-                        <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; color: #001529; font-weight: 600;"><i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Projetos Seguros e Escaláveis</li>
-                        <li style="display: flex; align-items: center; gap: 10px; color: #001529; font-weight: 600;"><i data-lucide="shield-check" style="color: #28a745; width: 20px;"></i> Suporte Técnico de Alto Nível</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="pain-section">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 class="white">Sua empresa enfrenta algum desses <span class="highlight-soft">problemas?</span></h2>
-                </div>
-                <div class="pain-list-premium">
-                    <div class="pain-card" data-aos="fade-up"><i data-lucide="wifi-off"></i><p>Internet instável e sistemas lentos.</p></div>
-                    <div class="pain-card" data-aos="fade-up" data-aos-delay="100"><i data-lucide="trending-down"></i><p>Quedas que geram prejuízo imediato.</p></div>
-                    <div class="pain-card" data-aos="fade-up" data-aos-delay="200"><i data-lucide="life-buoy"></i><p>Falta de suporte quando você mais precisa.</p></div>
+                    <span style="color: #007bff; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px;">Autoridade em Conectividade</span>
+                    <h2 style="color: #001529; font-size: 2.5rem; font-weight: 800; margin: 20px 0;">Experiência sólida para garantir a sua <span style="color: #007bff;">continuidade.</span></h2>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 20px;">A <strong>JNA Soluções</strong> é referência em estabilidade e performance utilizando hardware de ponta como Cisco, MikroTik e Ubiquiti.</p>
                 </div>
             </div>
         </section>
 
         <section id="solucoes" class="services-premium">
             <div class="container">
-                <div class="section-header"><h2>Soluções Profissionais e Objetivas</h2></div>
+                <div class="section-header"><h2>Soluções Profissionais</h2></div>
                 <div class="services-grid">
-                    <div class="s-card" data-aos="fade-up"><i data-lucide="wifi"></i><h3>Wi-Fi Corporativo de Alta Performance</h3><p>Conexão estável e rápida para empresas e clientes.</p></div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="100"><i data-lucide="cable"></i><h3>Cabeamento Estruturado CAT6 e 6A</h3><p>Redes cabeadas organizadas e preparadas para altas taxas.</p></div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="200"><i data-lucide="activity"></i><h3>Análise e Diagnóstico de Rede</h3><p>Diagnóstico preciso para identificar e eliminar gargalos.</p></div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="300"><i data-lucide="monitor"></i><h3>Suporte e Monitoramento Proativo</h3><p>Manutenção preventiva para evitar falhas inesperadas.</p></div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="400"><i data-lucide="languages"></i><h3>Consultoria Técnica Bilíngue (Inglês)</h3><p>Intermediação técnica global e suporte especializado.</p></div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="500"><i data-lucide="refresh-cw"></i><h3>Rede como Serviço (NaaS)</h3><p>Hardware, setup e gestão inclusos em uma mensalidade previsível.</p></div>
+                    <div class="s-card" data-aos="fade-up"><i data-lucide="wifi"></i><h3>Wi-Fi Corporativo</h3><p>Conexão estável e rápida para empresas e clientes.</p></div>
+                    <div class="s-card" data-aos="fade-up" data-aos-delay="100"><i data-lucide="cable"></i><h3>Cabeamento CAT6</h3><p>Redes cabeadas organizadas e certificadas.</p></div>
+                    <div class="s-card" data-aos="fade-up" data-aos-delay="200"><i data-lucide="activity"></i><h3>Diagnóstico</h3><p>Análise precisa para eliminar gargalos de rede.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="avaliacoes" style="padding: 80px 0; background-color: #f9f9f9; overflow: hidden;">
+            <div class="container" data-aos="fade-up">
+                <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                    <h2 style="color: #001529; font-size: 2.2rem; font-weight: 800;">O que nossos clientes dizem no Google</h2>
+                </div>
+
+                <div class="reviews-container">
+                    <div class="reviews-track">
+                        
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="client-info">
+                                    <img src="images/cliente-carolina.png" alt="Carolina Cantero">
+                                    <div><span class="client-name">Carolina Cantero</span><span class="review-date">Há uma semana</span></div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon-top" alt="Google">
+                            </div>
+                            <div class="stars-row">★★★★★</div>
+                            <p class="review-body">Excelente Suporte!. Rapidez e agilidade no atendimento. Pessoal cordial e sempre disposto a ajudar!!! Super Recomendo.</p>
+                            <div class="read-more">Ler mais</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="client-info">
+                                    <img src="images/cliente-vinicius.png" alt="Vinicius Dos Santos">
+                                    <div><span class="client-name">Vinicius Dos Santos</span><span class="review-date">Há 2 semanas</span></div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon-top" alt="Google">
+                            </div>
+                            <div class="stars-row">★★★★★</div>
+                            <p class="review-body">Excelente atendimento! A equipe demonstra muito profissionalismo, atenção aos detalhes e compromisso com a satisfação do cliente.</p>
+                            <div class="read-more">Ler mais</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="client-info">
+                                    <img src="images/cliente-gladson.png" alt="Gladson Valerio">
+                                    <div><span class="client-name">Gladson Valerio</span><span class="review-date">Há 3 semanas</span></div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon-top" alt="Google">
+                            </div>
+                            <div class="stars-row">★★★★★</div>
+                            <p class="review-body">Uma empresa que possui excelência no atendimento, resolvendo problemas de forma técnica. Conhecimento avançado em redes Ubiquiti.</p>
+                            <div class="read-more">Ler mais</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="client-info">
+                                    <img src="images/cliente-keren.png" alt="Kéren Gonçalves">
+                                    <div><span class="client-name">Kéren Gonçalves</span><span class="review-date">Há um mês</span></div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon-top" alt="Google">
+                            </div>
+                            <div class="stars-row">★★★★★</div>
+                            <p class="review-body">Empresa séria, presta um bom atendimento, atento aos detalhes do ambiente que precisa de ajuste. Recomendo para redes e Wi-Fi.</p>
+                            <div class="read-more">Ler mais</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="client-info">
+                                    <img src="images/cliente-pedro.png" alt="Pedro De Biase">
+                                    <div><span class="client-name">Pedro De Biase</span><span class="review-date">Há um mês</span></div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon-top" alt="Google">
+                            </div>
+                            <div class="stars-row">★★★★★</div>
+                            <p class="review-body">Empresa excelente, tanto na parte de construção da infraestrutura com o serviço de suporte. Atencioso e fazendo o acompanhamento.</p>
+                            <div class="read-more">Ler mais</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="client-info">
+                                    <img src="images/cliente-kauan.png" alt="Kaua Matheus">
+                                    <div><span class="client-name">Kaua Matheus</span><span class="review-date">Há 2 meses</span></div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon-top" alt="Google">
+                            </div>
+                            <div class="stars-row">★★★★★</div>
+                            <p class="review-body">Profissional atencioso, que passa confiança, que faz vc se sentir tranquilo de que o seu problema será resolvido!!</p>
+                            <div class="read-more">Ler mais</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="client-info">
+                                    <img src="images/cliente-vinicius.png" alt="Marcos Vinícius">
+                                    <div><span class="client-name">Marcos Vinícius</span><span class="review-date">Há 2 meses</span></div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon-top" alt="Google">
+                            </div>
+                            <div class="stars-row">★★★★★</div>
+                            <p class="review-body">Ótimo atendimento e uma empresa muito atenciosa! Recomendo!!!!</p>
+                            <div class="read-more">Ler mais</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="client-info">
+                                    <img src="images/cliente-carolina.png" alt="Carolina">
+                                    <div><span class="client-name">Carolina Cantero</span><span class="review-date">Há uma semana</span></div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon-top" alt="Google">
+                            </div>
+                            <div class="stars-row">★★★★★</div>
+                            <p class="review-body">Excelente Suporte!. Rapidez e agilidade no atendimento. Pessoal cordial e sempre disposto a ajudar!!!</p>
+                            <div class="read-more">Ler mais</div>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="client-info">
+                                    <img src="images/cliente-vinicius.png" alt="Vinicius">
+                                    <div><span class="client-name">Vinicius Dos Santos</span><span class="review-date">Há 2 semanas</span></div>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" class="google-icon-top" alt="Google">
+                            </div>
+                            <div class="stars-row">★★★★★</div>
+                            <p class="review-body">Excelente atendimento! A equipe demonstra muito profissionalismo e atenção aos detalhes.</p>
+                            <div class="read-more">Ler mais</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -231,127 +364,33 @@
             <div class="container">
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
                     <div class="contact-text" data-aos="fade-right">
-                        <h2 style="color: #001529; font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Solicite um <span class="highlight">Orçamento</span></h2>
-                        <p style="color: #666; margin-bottom: 30px;">Preencha o formulário e entraremos em contato em até 24h.</p>
-                        <div class="contact-info">
-                            <p style="font-weight: 600; color: #001529; margin-bottom: 10px;"><i data-lucide="mail" style="color: #007bff; width: 20px;"></i> contato@jnasolucoes.com.br</p>
-                            <p style="font-weight: 600; color: #001529;"><i data-lucide="globe" style="color: #007bff; width: 20px;"></i> Atendimento em todo o Brasil</p>
+                        <h2 style="color: #001529; font-size: 2.5rem; font-weight: 800;">Solicite um <span class="highlight">Orçamento</span></h2>
+                        <div class="contact-info" style="margin-top: 30px;">
+                            <p><i data-lucide="mail" style="color: #007bff; width: 20px; vertical-align: middle;"></i> contato@jnasolucoes.com.br</p>
+                            <p><i data-lucide="globe" style="color: #007bff; width: 20px; vertical-align: middle;"></i> Atendimento em todo o Brasil</p>
                         </div>
                     </div>
                     <div class="contact-form-container" data-aos="fade-left">
-                        <form action="https://formspree.io/f/myzjrzqa" method="POST" style="background: #f8f9fa; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                            <div style="margin-bottom: 15px;"><input type="text" name="nome" placeholder="Seu Nome / Empresa" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></div>
-                            <div style="margin-bottom: 15px;"><input type="email" name="_replyto" placeholder="E-mail Corporativo" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></div>
-                            <div style="margin-bottom: 15px;"><input type="tel" name="telefone" placeholder="WhatsApp" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></div>
-                            <div style="margin-bottom: 20px;"><textarea name="mensagem" placeholder="Como podemos ajudar sua infraestrutura hoje?" rows="4" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;"></textarea></div>
-                            <button type="submit" class="btn-primary" style="width: 100%; cursor: pointer; border: none;">Enviar Solicitação</button>
+                        <form action="https://formspree.io/f/myzjrzqa" method="POST" style="background: #f8f9fa; padding: 30px; border-radius: 12px;">
+                            <input type="text" name="nome" placeholder="Seu Nome / Empresa" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                            <input type="email" name="_replyto" placeholder="E-mail Corporativo" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                            <textarea name="mensagem" placeholder="Como podemos ajudar?" rows="4" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px;"></textarea>
+                            <button type="submit" class="btn-primary" style="width: 100%; border: none;">Enviar Solicitação</button>
                         </form>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEÇÃO AVALIAÇÕES ATUALIZADA (BLINDADA E NATIVA) -->
-        <section id="avaliacoes" style="padding: 80px 0; background-color: #f9f9f9; overflow: hidden;">
-            <div class="container" data-aos="fade-up">
-                <div class="section-header" style="text-align: center; margin-bottom: 50px;">
-                    <h2 style="color: #001529; font-size: 2.2rem; font-weight: 800;">O que nossos clientes dizem no Google</h2>
-                    <p style="color: #666;">Confiança comprovada por quem utiliza nossas soluções de infraestrutura.</p>
-                </div>
-                
-                <div class="reviews-wrapper" style="overflow-x: auto; display: flex; gap: 20px; padding: 10px 10px 40px 10px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
-                    
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="images/cliente-carolina.png" alt="Carolina Cantero">
-                            <div><strong>Carolina Cantero</strong><div class="stars">★★★★★</div></div>
-                        </div>
-                        <p>"Excelente Suporte!. Rapidez e agilidade no atendimento. Pessoal cordial e sempre disposto a ajudar!!! Super Recomendo."</p>
-                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="images/cliente-vinicius.png" alt="Vinicius Dos Santos">
-                            <div><strong>Vinicius Dos Santos</strong><div class="stars">★★★★★</div></div>
-                        </div>
-                        <p>"Excelente atendimento! A equipe demonstra muito profissionalismo, atenção aos detalhes e compromisso com a satisfação do cliente. Desde o primeiro contato fui muito bem atendido. Recomendo fortemente!"</p>
-                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="images/cliente-gladson.png" alt="Gladson Valerio">
-                            <div><strong>Gladson Valerio</strong><div class="stars">★★★★★</div></div>
-                        </div>
-                        <p>"Uma empresa que possui excelência no atendimento, resolvendo todos os problemas de forma técnica. Com conhecimento avançado em redes corporativas Ubiquiti, eu a indico para serviços de tecnologia"</p>
-                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="images/cliente-keren.png" alt="Kéren Gonçalves">
-                            <div><strong>Kéren Gonçalves</strong><div class="stars">★★★★★</div></div>
-                        </div>
-                        <p>"Empresa séria, presta um bom atendimento, atento aos detalhes do ambiente que precisa de ajuste. Recomendo para todos que precisam de qualquer suporte para T.I, principalmente redes e Wi-Fi."</p>
-                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="images/cliente-pedro.png" alt="Pedro De Biase">
-                            <div><strong>Pedro De Biase</strong><div class="stars">★★★★★</div></div>
-                        </div>
-                        <p>"Empresa excelente, tanto na parte de construção da infraestrutura com o serviço de suporte. Sempre responsivo, atencioso e fazendo o acompanhamento."</p>
-                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <img src="images/cliente-kauan.png" alt="Kaua Matheus">
-                            <div><strong>Kaua Matheus</strong><div class="stars">★★★★★</div></div>
-                        </div>
-                        <p>"Profissional atencioso, que passa confiança, que faz vc se sentir tranquilo de que o seu problema será resolvido!!"</p>
-                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
-                    </div>
-
-                    <div class="review-card">
-                        <div class="review-header">
-                            <!-- Reaproveitando a foto do Vinicius para Marcos Vinícius -->
-                            <img src="images/cliente-vinicius.png" alt="Marcos Vinícius">
-                            <div><strong>Marcos Vinícius</strong><div class="stars">★★★★★</div></div>
-                        </div>
-                        <p>"Ótimo atendimento e uma empresa muito atenciosa! Recomendo!!!!"</p>
-                        <div class="google-tag"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_Icon.svg" style="width:14px"> Avaliação no Google</div>
-                    </div>
-
-                </div>
-                <div style="text-align: center; margin-top: 10px; color: #999; font-size: 0.8rem;">
-                    <i data-lucide="arrow-left-right" style="width: 14px; vertical-align: middle;"></i> Arraste para o lado para ler mais
-                </div>
-            </div>
-        </section>
-
-        <section class="cta-premium" style="padding: 60px 0; background-color: #7b94b0;">
-            <div class="container">
-                <div class="cta-inner" data-aos="zoom-in" style="background-color: #1a1e2e; padding: 40px 30px; border-radius: 16px; text-align: center; max-width: 800px; margin: 0 auto;">
-                    <h2 style="color: white; font-size: 1.8rem; font-weight: 700; margin-bottom: 25px;">Uma rede instável impacta seus resultados.</h2>
-                    <a href="https://wa.me/5511981439140" class="btn-whatsapp-large" style="background-color: #25D366; color: white; padding: 16px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;">Entrar em contato via WhatsApp</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="footer" style="padding: 40px 0; background: #001529; color: white; text-align: center;">
-        <div class="container">
-            <p>&copy; 2026 JNA Soluções - Especialistas em Infraestrutura de Redes</p>
-        </div>
+        <div class="container"><p>&copy; 2026 JNA Soluções - Especialistas em Infraestrutura</p></div>
     </footer>
 
     <div id="cookie-banner" class="cookie-banner">
         <div class="container cookie-content">
-            <p>Utilizamos cookies essenciais para oferecer a melhor experiência. Ao navegar, você concorda.</p>
-            <button id="accept-cookies" class="btn-cookie">Li e aceito</button>
+            <p>Utilizamos cookies para melhorar sua experiência. Ao navegar, você concorda.</p>
+            <button id="accept-cookies" class="btn-cookie">Aceitar</button>
         </div>
     </div>
 
