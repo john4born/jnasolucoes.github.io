@@ -51,13 +51,118 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
 .pain-card p { font-size: 19px; font-weight: 600; }
 .pain-footer { font-size: 24px; font-weight: 900; color: white; }
 
-/* SERVICES (AJUSTADO PARA A GRADE DE 4 CARDS) */
+/* SERVICES */
 .services-premium { padding: 100px 0; background: white; border-radius: 60px 60px 0 0; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-top: 50px; }
 .s-card { padding: 40px 30px; background: #F8FAFC; border-radius: 20px; border-left: 5px solid var(--primary); transition: 0.3s; display: flex; flex-direction: column; gap: 10px; }
 .s-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
 .s-card h3 { color: var(--dark-blue); font-weight: 800; font-size: 19px; line-height: 1.2; }
 .s-card p { font-size: 15px; color: var(--text-main); }
+
+/* CARROSSEL PARCEIROS */
+@keyframes scroll-infinito {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-11 * (40px + 60px))); }
+}
+.carousel-track img { transition: 0.3s ease; filter: grayscale(1) opacity(0.7); }
+.carousel-track img:hover { filter: grayscale(0) opacity(1); transform: scale(1.1); }
+
+/* --- NOVO TRECHO: ESTILO TRUSTINDEX (AVALIAÇÕES) --- */
+.reviews-container {
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+}
+
+.reviews-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll-reviews 45s linear infinite;
+}
+
+.reviews-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-reviews {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-340px * 7)); } /* 7 cards originais */
+}
+
+.review-card {
+    flex: 0 0 320px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 260px;
+    border: 1px solid #f0f0f0;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.client-info img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client-name {
+    font-weight: 700;
+    color: #000;
+    font-size: 0.95rem;
+    display: block;
+}
+
+.review-date {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 400;
+}
+
+.google-icon-top {
+    width: 18px;
+    height: 18px;
+}
+
+.stars-row {
+    color: #ffc107;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 2px;
+}
+
+.review-body {
+    color: #444;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.read-more {
+    margin-top: 15px;
+    color: #999;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
 
 /* CTA */
 .cta-premium { padding: 100px 0; }
