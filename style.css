@@ -87,3 +87,8 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
     .nav-menu { display: none; }
     .trust-indicators { flex-direction: column; gap: 15px; }
 }
+
+/* REMOVER PROPAGANDA E LINKS DO TRUSTINDEX */
+.ti-footer, .ti-base-link {
+    display: none !important;
+}
