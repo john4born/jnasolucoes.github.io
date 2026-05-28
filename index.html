@@ -30,7 +30,24 @@
                 <a href="blog.html">Blog</a>
                 <a href="#contato">Contato</a>
             </nav>
-            <a href="https://wa.me/5511981439140" class="btn-outline">Falar com especialista</a>
+            <a href="https://wa.me/5511981439140" class="btn-outline btn-outline-desktop">Falar com especialista</a>
+            <button id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" style="display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 1100;">
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+            </button>
+        </div>
+
+        <!-- MENU MOBILE -->
+        <div id="mobile-menu" style="display: none; position: fixed; top: 100px; left: 0; width: 100%; background: white; box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 999; padding: 16px 24px 24px; flex-direction: column; gap: 4px;">
+            <a href="index.html" onclick="closeMenu()" class="mob-link">Início</a>
+            <a href="index.html#quem-somos" onclick="closeMenu()" class="mob-link">Quem Somos</a>
+            <a href="index.html#solucoes" onclick="closeMenu()" class="mob-link">Soluções</a>
+            <a href="blog.html" onclick="closeMenu()" class="mob-link">Blog</a>
+            <a href="index.html#contato" onclick="closeMenu()" class="mob-link">Contato</a>
+            <a href="https://wa.me/5511981439140" class="btn-primary" style="margin-top: 12px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <i data-lucide="message-circle" style="width:16px;height:16px;"></i> Falar com especialista
+            </a>
         </div>
     </header>
 
@@ -712,6 +729,42 @@
         }
         .ti-footer, .ti-base-link { display: none !important; }
 
+        /* Menu hamburguer */
+        .ham-line { display: block; width: 24px; height: 2px; background: #001529; border-radius: 2px; transition: all 0.3s ease; }
+        #hamburger.open .ham-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        #hamburger.open .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        #hamburger.open .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mob-link { display: block; padding: 14px 8px; color: #001529; font-weight: 700; font-size: 1rem; text-decoration: none; border-bottom: 1px solid #f0f0f0; transition: color 0.2s; }
+        .mob-link:hover { color: #007bff; }
+        .mob-link:last-of-type { border-bottom: none; }
+        @media (max-width: 900px) {
+            .nav-menu { display: none !important; }
+            .btn-outline-desktop { display: none !important; }
+            #hamburger { display: flex !important; }
+        }
+
+        /* Menu hamburguer */
+        function toggleMenu() {
+            var menu = document.getElementById('mobile-menu');
+            var btn  = document.getElementById('hamburger');
+            var open = menu.style.display === 'flex';
+            menu.style.display = open ? 'none' : 'flex';
+            btn.classList.toggle('open', !open);
+            lucide.createIcons();
+        }
+        function closeMenu() {
+            document.getElementById('mobile-menu').style.display = 'none';
+            document.getElementById('hamburger').classList.remove('open');
+        }
+        // Fechar ao clicar fora
+        document.addEventListener('click', function(e) {
+            var menu = document.getElementById('mobile-menu');
+            var btn  = document.getElementById('hamburger');
+            if (menu.style.display === 'flex' && !menu.contains(e.target) && !btn.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
         /* Carrossel de avaliações */
         .rev-card {
             background: white;
@@ -848,6 +901,28 @@
             lucide.createIcons();
             setTimeout(function(){ window.open(url, '_blank'); }, 600);
         }
+
+        /* Menu hamburguer */
+        function toggleMenu() {
+            var menu = document.getElementById('mobile-menu');
+            var btn  = document.getElementById('hamburger');
+            var open = menu.style.display === 'flex';
+            menu.style.display = open ? 'none' : 'flex';
+            btn.classList.toggle('open', !open);
+            lucide.createIcons();
+        }
+        function closeMenu() {
+            document.getElementById('mobile-menu').style.display = 'none';
+            document.getElementById('hamburger').classList.remove('open');
+        }
+        // Fechar ao clicar fora
+        document.addEventListener('click', function(e) {
+            var menu = document.getElementById('mobile-menu');
+            var btn  = document.getElementById('hamburger');
+            if (menu.style.display === 'flex' && !menu.contains(e.target) && !btn.contains(e.target)) {
+                closeMenu();
+            }
+        });
 
         /* Carrossel de avaliações */
         (function() {
