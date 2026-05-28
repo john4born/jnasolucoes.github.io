@@ -51,9 +51,10 @@
                         </a>
                         <a href="#solucoes" class="btn-secondary">Conhecer Soluções</a>
                     </div>
-                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: 20px;">
-                        <i data-lucide="info" style="width: 14px; vertical-align: middle;"></i> Oferta exclusiva para empresas e condomínios.
-                    </p>
+                    <div style="display: inline-flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 50px; padding: 10px 20px; margin-top: 20px; flex-wrap: wrap; justify-content: center;">
+                        <span style="width: 10px; height: 10px; background: #25D366; border-radius: 50%; display: inline-block; flex-shrink: 0; animation: pulse-green 1.5s infinite;"></span>
+                        <span style="font-size: 0.88rem; color: rgba(255,255,255,0.95); font-weight: 600;">Apenas <strong style="color: #fff;">5 diagnósticos gratuitos</strong> disponíveis por mês — vagas limitadas.</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -398,6 +399,14 @@
                 </div>
 
                 <div style="max-width: 620px; margin: 0 auto;" data-aos="fade-up">
+
+                    <div style="display: flex; align-items: center; gap: 12px; background: #fff8e1; border: 1.5px solid #ffc107; border-radius: 12px; padding: 14px 18px; margin-bottom: 24px; flex-wrap: wrap;">
+                        <i data-lucide="alert-triangle" style="width: 20px; height: 20px; color: #e6a100; flex-shrink: 0;"></i>
+                        <p style="margin: 0; font-size: 0.9rem; color: #7a5200; font-weight: 600; line-height: 1.5;">
+                            Realizamos apenas <strong>5 diagnósticos gratuitos por mês</strong>. Garanta o seu antes que as vagas se esgotem.
+                        </p>
+                    </div>
+
                     <div style="margin-bottom: 8px; display: flex; justify-content: space-between; align-items: center;">
                         <span id="jna-step-label" style="font-size: 0.8rem; color: #888; font-weight: 600;">Passo 1 de 4</span>
                         <span id="jna-step-pct" style="font-size: 0.8rem; color: #007bff; font-weight: 700;">25%</span>
@@ -535,7 +544,11 @@
         <section class="cta-premium" style="padding: 60px 0; background-color: #7b94b0;">
             <div class="container">
                 <div class="cta-inner" data-aos="zoom-in" style="background-color: #1a1e2e; padding: 40px 30px; border-radius: 16px; text-align: center; max-width: 800px; margin: 0 auto;">
-                    <h2 style="color: white; font-size: 1.8rem; font-weight: 700; margin-bottom: 25px;">Uma rede instável impacta seus resultados.</h2>
+                    <h2 style="color: white; font-size: 1.8rem; font-weight: 700; margin-bottom: 12px;">Uma rede instável impacta seus resultados.</h2>
+                    <p style="color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 24px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <span style="width: 8px; height: 8px; background: #25D366; border-radius: 50%; display: inline-block; animation: pulse-green 1.5s infinite;"></span>
+                        Restam vagas este mês para diagnóstico gratuito
+                    </p>
                     <a href="https://wa.me/5511981439140" class="btn-whatsapp-large" style="background-color: #25D366; color: white; padding: 16px 32px; border-radius: 8px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s;">
                         Entrar em contato via WhatsApp
                     </a>
@@ -602,6 +615,11 @@
             #jna-s2 > div:first-of-type { grid-template-columns: 1fr; }
         }
         .ti-footer, .ti-base-link { display: none !important; }
+        @keyframes pulse-green {
+            0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70%  { box-shadow: 0 0 0 7px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
     </style>
 
     <script>
