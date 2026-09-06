@@ -1,1 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TJXNZSLM');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco, MikroTik ou Ubiquiti: qual escolher para sua empresa? | JNA Soluções</title>
+    <meta name="description" content="Comparativo técnico e prático entre Cisco, MikroTik e Ubiquiti para redes corporativas. Saiba qual fabricante faz mais sentido para o tamanho e orçamento da sua empresa.">
+    <meta name="keywords" content="Cisco MikroTik Ubiquiti comparativo, melhor equipamento rede corporativa, switch roteador empresa São Paulo, infraestrutura de rede fabricantes, UniFi Cisco Meraki MikroTik">
+    <link rel="canonical" href="https://www.jnasolucoes.com.br/cisco-mikrotik-ubiquiti-qual-escolher.html">
+    <meta property="og:title" content="Cisco, MikroTik ou Ubiquiti: qual escolher para sua empresa?">
+    <meta property="og:description" content="Comparativo técnico e prático entre os três principais fabricantes de equipamentos de rede corporativa.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.jnasolucoes.com.br/cisco-mikrotik-ubiquiti-qual-escolher.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=8">
+
+    <style>
+        .article-body { max-width: 760px; margin: 0 auto; }
+        .article-body h2 { color: #001529; font-size: 1.6rem; font-weight: 800; margin: 48px 0 16px; line-height: 1.3; }
+        .article-body h3 { color: #001529; font-size: 1.2rem; font-weight: 700; margin: 32px 0 12px; }
+        .article-body p { color: #444; font-size: 1.05rem; line-height: 1.85; margin-bottom: 20px; }
+        .article-body strong { color: #001529; }
+        .article-highlight { background: #f0f6ff; border-left: 5px solid #007bff; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 32px 0; }
+        .article-highlight p { margin: 0; color: #001529; font-weight: 600; font-size: 1rem; }
+        .fab-card { border-radius: 16px; padding: 32px; margin-bottom: 32px; border: 1.5px solid #e0e0e0; background: white; }
+        .fab-header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+        .fab-badge { display: inline-flex; align-items: center; justify-content: center; padding: 6px 16px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; }
+        .fab-card h3 { color: #001529; font-size: 1.3rem; font-weight: 900; margin: 0; }
+        .fab-card .subtitle { color: #888; font-size: 0.88rem; margin: 4px 0 0; }
+        .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+        .pros, .cons { border-radius: 10px; padding: 16px; }
+        .pros { background: #f0fff4; }
+        .cons { background: #fff5f5; }
+        .pros h4 { color: #28a745; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
+        .cons h4 { color: #dc3545; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; margin-bottom: 10px; }
+        .pros ul, .cons ul { list-style: none; padding: 0; margin: 0; }
+        .pros ul li, .cons ul li { font-size: 0.88rem; color: #444; line-height: 1.6; margin-bottom: 6px; display: flex; gap: 8px; align-items: flex-start; }
+        .fab-ideal { background: #f0f6ff; border-radius: 10px; padding: 14px 16px; margin-top: 16px; font-size: 0.9rem; color: #001529; font-weight: 600; display: flex; align-items: flex-start; gap: 10px; }
+        .compare-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 0.9rem; }
+        .compare-table th { background: #001529; color: white; padding: 14px 16px; text-align: left; font-weight: 700; }
+        .compare-table th:first-child { border-radius: 10px 0 0 0; }
+        .compare-table th:last-child { border-radius: 0 10px 0 0; }
+        .compare-table td { padding: 12px 16px; border-bottom: 1px solid #f0f0f0; color: #444; vertical-align: middle; }
+        .compare-table tr:nth-child(even) td { background: #f8f9fa; }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .tag-green { background: #d4edda; color: #155724; padding: 3px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+        .tag-blue { background: #cce5ff; color: #004085; padding: 3px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+        .tag-orange { background: #fff3cd; color: #856404; padding: 3px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; }
+        .share-bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 20px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin: 40px 0; }
+        .share-bar span { font-size: 0.85rem; font-weight: 700; color: #555; }
+        .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: opacity 0.2s; }
+        .share-btn:hover { opacity: 0.85; }
+        .ham-line { display: block; width: 24px; height: 2px; background: #001529; border-radius: 2px; transition: all 0.3s ease; }
+        #hamburger.open .ham-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        #hamburger.open .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        #hamburger.open .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mob-link { display: block; padding: 14px 8px; color: #001529; font-weight: 700; font-size: 1rem; text-decoration: none; border-bottom: 1px solid #f0f0f0; transition: color 0.2s; }
+        .mob-link:hover { color: #007bff; }
+        @media (max-width: 900px) {
+            .nav-menu { display: none !important; }
+            .btn-outline-desktop { display: none !important; }
+            #hamburger { display: flex !important; }
+            .pros-cons { grid-template-columns: 1fr; }
+            .compare-table { font-size: 0.78rem; }
+            .compare-table th, .compare-table td { padding: 10px 8px; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJXNZSLM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <img src="logo.png" alt="JNA Soluções" class="logo-top">
+            <nav class="nav-menu">
+                <a href="index.html">Início</a>
+                <a href="index.html#quem-somos">Quem Somos</a>
+                <a href="index.html#solucoes">Soluções</a>
+                <a href="blog.html" style="color: #007bff;">Blog</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+            <a href="https://wa.me/5511981439140" class="btn-outline btn-outline-desktop">Falar com especialista</a>
+            <button id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" style="display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 1100;">
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+            </button>
+        </div>
+        <div id="mobile-menu" style="display: none; position: fixed; top: 100px; left: 0; width: 100%; background: white; box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 999; padding: 16px 24px 24px; flex-direction: column; gap: 4px;">
+            <a href="index.html" onclick="closeMenu()" class="mob-link">Início</a>
+            <a href="index.html#quem-somos" onclick="closeMenu()" class="mob-link">Quem Somos</a>
+            <a href="index.html#solucoes" onclick="closeMenu()" class="mob-link">Soluções</a>
+            <a href="blog.html" onclick="closeMenu()" class="mob-link">Blog</a>
+            <a href="index.html#contato" onclick="closeMenu()" class="mob-link">Contato</a>
+            <a href="https://wa.me/5511981439140" class="btn-primary" style="margin-top: 12px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <i data-lucide="message-circle" style="width:16px;height:16px;"></i> Falar com especialista
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section style="padding: 60px 0 0; background: linear-gradient(180deg, #ffffff 0%, #f0f6ff 100%);">
+            <div class="container">
+                <div class="article-body">
+                    <nav style="margin-bottom: 24px; font-size: 0.85rem; color: #888;" data-aos="fade-up">
+                        <a href="index.html" style="color: #888; text-decoration: none;">Início</a>
+                        <span style="margin: 0 8px;">›</span>
+                        <a href="blog.html" style="color: #888; text-decoration: none;">Blog</a>
+                        <span style="margin: 0 8px;">›</span>
+                        <span style="color: #007bff;">Cisco, MikroTik ou Ubiquiti</span>
+                    </nav>
+                    <div data-aos="fade-up">
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                            <span style="background: #e8f0fe; color: #007bff; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase;">Técnico</span>
+                            <span style="background: #f0f6ff; color: #555; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px;">Equipamentos</span>
+                            <span style="background: #f0f6ff; color: #555; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px;">Comparativo</span>
+                        </div>
+                        <h1 style="color: #001529; font-size: 2.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px;">
+                            Cisco, MikroTik ou Ubiquiti: qual escolher para sua empresa?
+                        </h1>
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid #eee;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 36px; height: 36px; background: #007bff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="user" style="width: 18px; height: 18px; color: white;"></i>
+                                </div>
+                                <span style="font-size: 0.9rem; font-weight: 700; color: #001529;">JNA Soluções</span>
+                            </div>
+                            <span style="color: #aaa; font-size: 0.85rem; display: flex; align-items: center; gap: 5px;">
+                                <i data-lucide="clock" style="width: 14px; height: 14px;"></i> 9 min de leitura
+                            </span>
+                            <span style="color: #aaa; font-size: 0.85rem; display: flex; align-items: center; gap: 5px;">
+                                <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> São Paulo, SP
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORPO -->
+        <section style="padding: 40px 0 80px; background: #ffffff;">
+            <div class="container">
+                <div class="article-body" data-aos="fade-up">
+
+                    <p>Uma das perguntas mais comuns que recebemos de gestores e administradores na hora de renovar a infraestrutura de rede é: <strong>"Qual fabricante devo usar?"</strong>. Cisco, MikroTik e Ubiquiti são os três nomes que aparecem em quase toda conversa técnica — e cada um tem um perfil muito diferente.</p>
+
+                    <p>A resposta honesta é: <strong>depende do seu caso</strong>. Tamanho da empresa, orçamento, complexidade da rede e capacidade técnica da equipe são fatores que determinam qual fabricante faz mais sentido. Neste artigo vamos comparar os três de forma direta e prática.</p>
+
+                    <div class="article-highlight">
+                        <p>Não existe fabricante "melhor". Existe o fabricante certo para o seu cenário. Escolher errado significa pagar a mais por recursos que não vai usar — ou economizar e sofrer com limitações que vão travar sua operação.</p>
+                    </div>
+
+                    <h2>Cisco — o padrão corporativo enterprise</h2>
+
+                    <div class="fab-card">
+                        <div class="fab-header">
+                            <div>
+                                <span class="fab-badge" style="background: #1a6eb5; color: white;">Enterprise</span>
+                                <h3 style="margin-top: 8px;">Cisco</h3>
+                                <p class="subtitle">Switches Catalyst, Roteadores ISR, Meraki, Webex</p>
+                            </div>
+                        </div>
+
+                        <p style="color: #444; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">A Cisco é o fabricante mais reconhecido do mundo em redes corporativas. Seus equipamentos são usados em bancos, hospitais, grandes empresas e data centers ao redor do planeta. Quando alguém fala em "padrão de mercado" em TI corporativa, está falando de Cisco.</p>
+
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✓ Pontos fortes</h4>
+                                <ul>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Confiabilidade e durabilidade extremas</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Suporte técnico oficial robusto</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Certificações reconhecidas globalmente (CCNA, CCNP)</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Recursos avançados de segurança e segmentação</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Ideal para ambientes críticos e regulados</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>✗ Pontos fracos</h4>
+                                <ul>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Custo elevado — hardware e licenças</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Complexidade de configuração alta</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Requer profissional certificado</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Overkill para empresas pequenas</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Meraki depende de assinatura na nuvem</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="fab-ideal">
+                            <i data-lucide="target" style="width:18px;height:18px;color:#007bff;flex-shrink:0;margin-top:2px;"></i>
+                            <span><strong>Ideal para:</strong> Grandes empresas, ambientes críticos, bancos, hospitais de alta complexidade, empresas com equipe de TI dedicada e orçamento robusto.</span>
+                        </div>
+                    </div>
+
+                    <h2>MikroTik — o favorito dos técnicos avançados</h2>
+
+                    <div class="fab-card">
+                        <div class="fab-header">
+                            <div>
+                                <span class="fab-badge" style="background: #e85d04; color: white;">Técnico avançado</span>
+                                <h3 style="margin-top: 8px;">MikroTik</h3>
+                                <p class="subtitle">RouterOS, RouterBOARD, switches CRS, hEX, CCR</p>
+                            </div>
+                        </div>
+
+                        <p style="color: #444; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">A MikroTik é uma fabricante letã que conquistou o mercado com uma proposta única: equipamentos muito capazes a um preço muito mais acessível que a Cisco. O segredo é o RouterOS — um sistema operacional de rede extremamente poderoso que roda em todo o hardware MikroTik.</p>
+
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✓ Pontos fortes</h4>
+                                <ul>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Excelente custo-benefício</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> RouterOS extremamente flexível</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Sem licenças mensais obrigatórias</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> VPN, firewall, QoS, VLAN — tudo incluso</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Muito usado por ISPs e provedores</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>✗ Pontos fracos</h4>
+                                <ul>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Curva de aprendizado íngreme</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Interface não é intuitiva para iniciantes</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Gerenciamento centralizado limitado</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Wi-Fi não é o ponto forte da marca</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Requer profissional experiente para configurar bem</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="fab-ideal">
+                            <i data-lucide="target" style="width:18px;height:18px;color:#007bff;flex-shrink:0;margin-top:2px;"></i>
+                            <span><strong>Ideal para:</strong> Roteamento e firewall em PMEs e médias empresas, provedores de internet, ambientes com alta demanda de controle de tráfego e orçamento moderado.</span>
+                        </div>
+                    </div>
+
+                    <h2>Ubiquiti (UniFi) — o equilíbrio entre performance e facilidade</h2>
+
+                    <div class="fab-card">
+                        <div class="fab-header">
+                            <div>
+                                <span class="fab-badge" style="background: #0f62fe; color: white;">Melhor custo-benefício</span>
+                                <h3 style="margin-top: 8px;">Ubiquiti — UniFi</h3>
+                                <p class="subtitle">Access Points UniFi, switches, gateways, UniFi Network</p>
+                            </div>
+                        </div>
+
+                        <p style="color: #444; font-size: 0.95rem; line-height: 1.7; margin-bottom: 20px;">A Ubiquiti revolucionou o mercado de redes corporativas ao oferecer equipamentos de alta performance com um ecossistema gerenciável de forma centralizada — e sem licenças mensais obrigatórias. O sistema UniFi permite configurar e monitorar toda a rede por um único painel, de qualquer lugar.</p>
+
+                        <div class="pros-cons">
+                            <div class="pros">
+                                <h4>✓ Pontos fortes</h4>
+                                <ul>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Excelente performance de Wi-Fi</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Painel de gerenciamento centralizado e intuitivo</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Sem mensalidade de licença</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Roaming seamless entre access points</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Escalável — do pequeno ao grande ambiente</li>
+                                    <li><i data-lucide="check" style="width:14px;height:14px;color:#28a745;flex-shrink:0;margin-top:3px;"></i> Ecossistema completo: AP, switch, gateway, câmeras</li>
+                                </ul>
+                            </div>
+                            <div class="cons">
+                                <h4>✗ Pontos fracos</h4>
+                                <ul>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Recursos avançados de firewall mais limitados que Cisco</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Suporte oficial limitado — comunidade é o suporte</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Atualizações de firmware podem causar instabilidade</li>
+                                    <li><i data-lucide="x" style="width:14px;height:14px;color:#dc3545;flex-shrink:0;margin-top:3px;"></i> Não tem certificação de mercado como a Cisco</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="fab-ideal">
+                            <i data-lucide="target" style="width:18px;height:18px;color:#007bff;flex-shrink:0;margin-top:2px;"></i>
+                            <span><strong>Ideal para:</strong> Escritórios, PMEs, clínicas, hotéis, condomínios e qualquer ambiente que precise de Wi-Fi de alta performance com gerenciamento centralizado e sem estourar o orçamento.</span>
+                        </div>
+                    </div>
+
+                    <h2>Comparativo rápido lado a lado</h2>
+
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Critério</th>
+                                <th>Cisco</th>
+                                <th>MikroTik</th>
+                                <th>Ubiquiti</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Preço do hardware</strong></td>
+                                <td><span class="tag-orange">Alto</span></td>
+                                <td><span class="tag-green">Baixo</span></td>
+                                <td><span class="tag-blue">Médio</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Licenças mensais</strong></td>
+                                <td><span class="tag-orange">Sim (Meraki)</span></td>
+                                <td><span class="tag-green">Não</span></td>
+                                <td><span class="tag-green">Não</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Facilidade de configuração</strong></td>
+                                <td><span class="tag-orange">Baixa</span></td>
+                                <td><span class="tag-orange">Baixa</span></td>
+                                <td><span class="tag-green">Alta</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Performance de Wi-Fi</strong></td>
+                                <td><span class="tag-blue">Alta</span></td>
+                                <td><span class="tag-blue">Média</span></td>
+                                <td><span class="tag-green">Muito alta</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gerenciamento centralizado</strong></td>
+                                <td><span class="tag-green">Sim</span></td>
+                                <td><span class="tag-orange">Limitado</span></td>
+                                <td><span class="tag-green">Sim</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Recursos de segurança</strong></td>
+                                <td><span class="tag-green">Excelente</span></td>
+                                <td><span class="tag-green">Muito bom</span></td>
+                                <td><span class="tag-blue">Bom</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Suporte oficial</strong></td>
+                                <td><span class="tag-green">Excelente</span></td>
+                                <td><span class="tag-blue">Médio</span></td>
+                                <td><span class="tag-orange">Limitado</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ideal para</strong></td>
+                                <td>Grandes empresas</td>
+                                <td>Roteamento avançado</td>
+                                <td>PMEs e escritórios</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>E na prática, o que a JNA Soluções usa?</h2>
+
+                    <p>Trabalhamos com os três fabricantes — e a escolha depende sempre do projeto. Mas para a maioria das PMEs, escritórios, clínicas e condomínios em São Paulo, nossa recomendação padrão é um <strong>modelo híbrido</strong>:</p>
+
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: flex-start; gap: 12px; background: #f8f9fa; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;">
+                            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #28a745; flex-shrink: 0; margin-top: 2px;"></i>
+                            <span style="color: #444; font-size: 0.95rem; line-height: 1.6;"><strong>MikroTik no núcleo</strong> — roteador, firewall, controle de banda e failover de links. Potente, flexível e sem mensalidade.</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; background: #f8f9fa; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;">
+                            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #28a745; flex-shrink: 0; margin-top: 2px;"></i>
+                            <span style="color: #444; font-size: 0.95rem; line-height: 1.6;"><strong>Ubiquiti UniFi no Wi-Fi e switching</strong> — access points de alta performance com roaming inteligente, gerenciamento centralizado e visual limpo.</span>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 12px; background: #f8f9fa; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;">
+                            <i data-lucide="check-circle-2" style="width: 20px; height: 20px; color: #28a745; flex-shrink: 0; margin-top: 2px;"></i>
+                            <span style="color: #444; font-size: 0.95rem; line-height: 1.6;"><strong>Cisco quando o cliente exige</strong> — ambientes críticos, requisitos de compliance ou preferência corporativa por equipamentos certificados.</span>
+                        </li>
+                    </ul>
+
+                    <div class="article-highlight">
+                        <p>O fabricante certo é aquele que resolve o seu problema dentro do seu orçamento — e que o profissional responsável pelo projeto domina. Um MikroTik bem configurado supera um Cisco mal implementado em qualquer cenário.</p>
+                    </div>
+
+                    <div class="share-bar">
+                        <span>Compartilhar:</span>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.jnasolucoes.com.br/cisco-mikrotik-ubiquiti-qual-escolher.html" target="_blank" class="share-btn" style="background: #0077b5; color: white;">
+                            <i data-lucide="linkedin" style="width: 15px; height: 15px;"></i> LinkedIn
+                        </a>
+                        <a href="https://wa.me/?text=Comparativo técnico entre Cisco, MikroTik e Ubiquiti: https://www.jnasolucoes.com.br/cisco-mikrotik-ubiquiti-qual-escolher.html" target="_blank" class="share-btn" style="background: #25D366; color: white;">
+                            <i data-lucide="message-circle" style="width: 15px; height: 15px;"></i> WhatsApp
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="padding: 60px 0; background: #f0f6ff;">
+            <div class="container">
+                <div style="max-width: 680px; margin: 0 auto; text-align: center;" data-aos="fade-up">
+                    <i data-lucide="cpu" style="width: 40px; height: 40px; color: #007bff; margin-bottom: 16px;"></i>
+                    <h2 style="color: #001529; font-size: 1.8rem; font-weight: 800; margin-bottom: 14px;">Não sabe qual fabricante escolher para sua empresa?</h2>
+                    <p style="color: #666; font-size: 1.05rem; margin-bottom: 10px;">Fazemos um diagnóstico gratuito e recomendamos o melhor conjunto de equipamentos para o seu caso — sem empurrar marca, sem comissão de fabricante.</p>
+                    <p style="color: #e6a100; font-size: 0.9rem; font-weight: 700; margin-bottom: 28px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        <i data-lucide="alert-triangle" style="width: 16px; height: 16px;"></i> Apenas 5 vagas por mês — garanta a sua
+                    </p>
+                    <a href="https://wa.me/5511981439140?text=Olá! Li o artigo sobre Cisco, MikroTik e Ubiquiti e gostaria de um diagnóstico gratuito para saber qual equipamento faz sentido para minha empresa." style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 16px 32px; border-radius: 12px; font-weight: 800; text-decoration: none; font-size: 1.05rem;">
+                        <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i> Solicitar diagnóstico gratuito
+                    </a>
+                    <p style="color: #aaa; font-size: 0.85rem; margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 5px;">
+                        <i data-lucide="clock" style="width: 14px; height: 14px;"></i> Resposta em até 24h
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOLTAR -->
+        <section style="padding: 40px 0; background: white;">
+            <div class="container" style="text-align: center;">
+                <a href="blog.html" style="display: inline-flex; align-items: center; gap: 8px; color: #007bff; font-weight: 700; text-decoration: none; font-size: 0.95rem;">
+                    <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i> Voltar para o blog
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" style="padding: 40px 0; background: #001529; color: white; text-align: center;">
+        <div class="container">
+            <p>&copy; 2026 JNA Soluções - Especialistas em Infraestrutura de Redes</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Atendimento especializado em todo o Brasil.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 800, once: true });
+        function toggleMenu() {
+            var menu = document.getElementById('mobile-menu');
+            var btn  = document.getElementById('hamburger');
+            var open = menu.style.display === 'flex';
+            menu.style.display = open ? 'none' : 'flex';
+            btn.classList.toggle('open', !open);
+            lucide.createIcons();
+        }
+        function closeMenu() {
+            document.getElementById('mobile-menu').style.display = 'none';
+            document.getElementById('hamburger').classList.remove('open');
+        }
+        document.addEventListener('click', function(e) {
+            var menu = document.getElementById('mobile-menu');
+            var btn  = document.getElementById('hamburger');
+            if (menu.style.display === 'flex' && !menu.contains(e.target) && !btn.contains(e.target)) { closeMenu(); }
+        });
+    </script>
+</body>
+</html>
 
