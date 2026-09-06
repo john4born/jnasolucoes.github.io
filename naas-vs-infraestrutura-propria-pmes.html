@@ -1,1 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TJXNZSLM');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaaS vs. infraestrutura própria: o que faz mais sentido para PMEs? | JNA Soluções</title>
+    <meta name="description" content="Quando vale contratar rede como serviço (NaaS) e quando o CAPEX compensa mais? Guia completo para gestores de PMEs em São Paulo.">
+    <meta name="keywords" content="NaaS rede como serviço PME, infraestrutura de rede própria empresa, network as a service São Paulo, rede corporativa mensalidade, CAPEX OPEX rede TI">
+    <link rel="canonical" href="https://www.jnasolucoes.com.br/naas-vs-infraestrutura-propria-pmes.html">
+    <meta property="og:title" content="NaaS vs. infraestrutura própria: o que faz mais sentido para PMEs?">
+    <meta property="og:description" content="Quando vale contratar rede como serviço e quando o CAPEX compensa mais? Guia completo para gestores de PMEs.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.jnasolucoes.com.br/naas-vs-infraestrutura-propria-pmes.html">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=8">
+
+    <style>
+        .article-body { max-width: 760px; margin: 0 auto; }
+        .article-body h2 { color: #001529; font-size: 1.6rem; font-weight: 800; margin: 48px 0 16px; line-height: 1.3; }
+        .article-body h3 { color: #001529; font-size: 1.2rem; font-weight: 700; margin: 32px 0 12px; }
+        .article-body p { color: #444; font-size: 1.05rem; line-height: 1.85; margin-bottom: 20px; }
+        .article-body strong { color: #001529; }
+        .article-body ul { padding-left: 0; list-style: none; margin-bottom: 20px; }
+        .article-highlight { background: #f0f6ff; border-left: 5px solid #007bff; border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 32px 0; }
+        .article-highlight p { margin: 0; color: #001529; font-weight: 600; font-size: 1rem; }
+        .checklist-item { display: flex; align-items: flex-start; gap: 12px; background: #f8f9fa; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; }
+        .checklist-item span { color: #444; font-size: 0.95rem; line-height: 1.6; }
+        .share-bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 20px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; margin: 40px 0; }
+        .share-bar span { font-size: 0.85rem; font-weight: 700; color: #555; }
+        .share-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 8px; font-size: 0.85rem; font-weight: 700; text-decoration: none; transition: opacity 0.2s; }
+        .share-btn:hover { opacity: 0.85; }
+        .compare-table { width: 100%; border-collapse: collapse; margin: 32px 0; font-size: 0.95rem; }
+        .compare-table th { background: #001529; color: white; padding: 14px 16px; text-align: left; font-weight: 700; }
+        .compare-table th:first-child { border-radius: 10px 0 0 0; }
+        .compare-table th:last-child { border-radius: 0 10px 0 0; }
+        .compare-table td { padding: 14px 16px; border-bottom: 1px solid #f0f0f0; color: #444; vertical-align: top; }
+        .compare-table tr:nth-child(even) td { background: #f8f9fa; }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table .yes { color: #28a745; font-weight: 700; }
+        .compare-table .no { color: #dc3545; font-weight: 700; }
+        .compare-table .mid { color: #e6a100; font-weight: 700; }
+        .perfil-card { background: white; border: 1.5px solid #e0e0e0; border-radius: 14px; padding: 24px; margin-bottom: 16px; display: flex; gap: 16px; align-items: flex-start; }
+        .perfil-icon { width: 44px; height: 44px; border-radius: 10px; background: #e8f0fe; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .perfil-card h3 { color: #001529; font-size: 1rem; font-weight: 800; margin: 0 0 8px; }
+        .perfil-card p { color: #555; font-size: 0.92rem; line-height: 1.6; margin: 0; }
+        .ham-line { display: block; width: 24px; height: 2px; background: #001529; border-radius: 2px; transition: all 0.3s ease; }
+        #hamburger.open .ham-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        #hamburger.open .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        #hamburger.open .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .mob-link { display: block; padding: 14px 8px; color: #001529; font-weight: 700; font-size: 1rem; text-decoration: none; border-bottom: 1px solid #f0f0f0; transition: color 0.2s; }
+        .mob-link:hover { color: #007bff; }
+        @media (max-width: 900px) {
+            .nav-menu { display: none !important; }
+            .btn-outline-desktop { display: none !important; }
+            #hamburger { display: flex !important; }
+            .compare-table { font-size: 0.82rem; }
+            .compare-table th, .compare-table td { padding: 10px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJXNZSLM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <img src="logo.png" alt="JNA Soluções" class="logo-top">
+            <nav class="nav-menu">
+                <a href="index.html">Início</a>
+                <a href="index.html#quem-somos">Quem Somos</a>
+                <a href="index.html#solucoes">Soluções</a>
+                <a href="blog.html" style="color: #007bff;">Blog</a>
+                <a href="index.html#contato">Contato</a>
+            </nav>
+            <a href="https://wa.me/5511981439140" class="btn-outline btn-outline-desktop">Falar com especialista</a>
+            <button id="hamburger" onclick="toggleMenu()" aria-label="Abrir menu" style="display: none; flex-direction: column; justify-content: center; align-items: center; gap: 5px; background: none; border: none; cursor: pointer; padding: 8px; z-index: 1100;">
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+                <span class="ham-line"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" style="display: none; position: fixed; top: 100px; left: 0; width: 100%; background: white; box-shadow: 0 8px 24px rgba(0,0,0,0.12); z-index: 999; padding: 16px 24px 24px; flex-direction: column; gap: 4px;">
+            <a href="index.html" onclick="closeMenu()" class="mob-link">Início</a>
+            <a href="index.html#quem-somos" onclick="closeMenu()" class="mob-link">Quem Somos</a>
+            <a href="index.html#solucoes" onclick="closeMenu()" class="mob-link">Soluções</a>
+            <a href="blog.html" onclick="closeMenu()" class="mob-link">Blog</a>
+            <a href="index.html#contato" onclick="closeMenu()" class="mob-link">Contato</a>
+            <a href="https://wa.me/5511981439140" class="btn-primary" style="margin-top: 12px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <i data-lucide="message-circle" style="width:16px;height:16px;"></i> Falar com especialista
+            </a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section style="padding: 60px 0 0; background: linear-gradient(180deg, #ffffff 0%, #f0f6ff 100%);">
+            <div class="container">
+                <div class="article-body">
+                    <nav style="margin-bottom: 24px; font-size: 0.85rem; color: #888;" data-aos="fade-up">
+                        <a href="index.html" style="color: #888; text-decoration: none;">Início</a>
+                        <span style="margin: 0 8px;">›</span>
+                        <a href="blog.html" style="color: #888; text-decoration: none;">Blog</a>
+                        <span style="margin: 0 8px;">›</span>
+                        <span style="color: #007bff;">NaaS vs. Infraestrutura Própria</span>
+                    </nav>
+
+                    <div data-aos="fade-up">
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                            <span style="background: #e8f0fe; color: #007bff; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 20px; text-transform: uppercase;">Escritórios / PME</span>
+                            <span style="background: #f0f6ff; color: #555; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px;">Gestão financeira</span>
+                            <span style="background: #f0f6ff; color: #555; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px;">NaaS</span>
+                        </div>
+
+                        <h1 style="color: #001529; font-size: 2.2rem; font-weight: 900; line-height: 1.2; margin-bottom: 20px;">
+                            NaaS vs. infraestrutura própria: o que faz mais sentido para PMEs?
+                        </h1>
+
+                        <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid #eee;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <div style="width: 36px; height: 36px; background: #007bff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="user" style="width: 18px; height: 18px; color: white;"></i>
+                                </div>
+                                <span style="font-size: 0.9rem; font-weight: 700; color: #001529;">JNA Soluções</span>
+                            </div>
+                            <span style="color: #aaa; font-size: 0.85rem; display: flex; align-items: center; gap: 5px;">
+                                <i data-lucide="clock" style="width: 14px; height: 14px;"></i> 8 min de leitura
+                            </span>
+                            <span style="color: #aaa; font-size: 0.85rem; display: flex; align-items: center; gap: 5px;">
+                                <i data-lucide="map-pin" style="width: 14px; height: 14px;"></i> São Paulo, SP
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORPO -->
+        <section style="padding: 40px 0 80px; background: #ffffff;">
+            <div class="container">
+                <div class="article-body" data-aos="fade-up">
+
+                    <p>Você precisa renovar a infraestrutura de rede da sua empresa. Chegou a hora de decidir: comprar os equipamentos e montar a rede por conta própria — ou contratar tudo como serviço mensal, sem desembolso inicial?</p>
+
+                    <p>Essa decisão envolve mais do que o preço. Envolve <strong>fluxo de caixa, previsibilidade, responsabilidade técnica e o estágio de crescimento da sua empresa</strong>. Neste artigo vamos comparar os dois modelos de forma honesta para você tomar a melhor decisão.</p>
+
+                    <div class="article-highlight">
+                        <p>Não existe resposta certa para todo mundo. O modelo ideal depende do tamanho da sua empresa, da sua capacidade de investimento e de quanto controle você quer ter sobre a infraestrutura.</p>
+                    </div>
+
+                    <h2>O que é NaaS (Network as a Service)?</h2>
+
+                    <p>NaaS é o modelo em que você contrata a infraestrutura de rede como um serviço — assim como você contrata internet, telefonia ou software em nuvem. Em vez de comprar switches, access points e roteadores, você paga uma <strong>mensalidade fixa</strong> que inclui hardware, instalação, configuração, suporte e manutenção.</p>
+
+                    <p>O fornecedor é responsável por tudo: equipamentos, atualizações, monitoramento e substituição em caso de falha. Você usa a rede. Ele cuida dela.</p>
+
+                    <h2>O que é infraestrutura própria (modelo CAPEX)?</h2>
+
+                    <p>No modelo tradicional, sua empresa compra os equipamentos, contrata a instalação e assume a propriedade e a responsabilidade pela infraestrutura. O investimento é feito uma única vez — ou em ciclos de 4 a 6 anos, quando o hardware precisa ser renovado.</p>
+
+                    <p>A manutenção pode ser feita por equipe interna, por um parceiro técnico contratado ou por demanda, quando algo falha.</p>
+
+                    <h2>Comparativo direto: NaaS vs. Infraestrutura Própria</h2>
+
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th>Critério</th>
+                                <th>NaaS</th>
+                                <th>Infraestrutura Própria</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Investimento inicial</strong></td>
+                                <td class="yes">Baixo ou zero</td>
+                                <td class="no">Alto (CAPEX)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Custo mensal</strong></td>
+                                <td class="no">Recorrente e fixo</td>
+                                <td class="yes">Baixo após implantação</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Custo total em 5 anos</strong></td>
+                                <td class="no">Geralmente maior</td>
+                                <td class="yes">Geralmente menor</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Previsibilidade financeira</strong></td>
+                                <td class="yes">Alta — mensalidade fixa</td>
+                                <td class="mid">Média — manutenções imprevistas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Responsabilidade técnica</strong></td>
+                                <td class="yes">Do fornecedor</td>
+                                <td class="no">Da sua empresa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Atualização de hardware</strong></td>
+                                <td class="yes">Incluída no contrato</td>
+                                <td class="no">Custo adicional futuro</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Suporte técnico</strong></td>
+                                <td class="yes">Incluído e proativo</td>
+                                <td class="mid">Depende do contrato</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Flexibilidade para escalar</strong></td>
+                                <td class="yes">Alta — ajuste mensal</td>
+                                <td class="mid">Média — requer novo investimento</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Propriedade dos equipamentos</strong></td>
+                                <td class="no">Do fornecedor</td>
+                                <td class="yes">Da sua empresa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Impacto no balanço</strong></td>
+                                <td class="yes">OPEX — despesa operacional</td>
+                                <td class="mid">CAPEX — ativo depreciável</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Quando o NaaS faz mais sentido?</h2>
+
+                    <div class="perfil-card">
+                        <div class="perfil-icon"><i data-lucide="trending-up" style="width: 22px; height: 22px; color: #007bff;"></i></div>
+                        <div>
+                            <h3>Empresas em crescimento acelerado</h3>
+                            <p>Se sua equipe está dobrando de tamanho a cada ano, o NaaS permite escalar a rede sem novos investimentos. Você adiciona pontos de acesso e capacidade na mensalidade, sem comprar hardware novo.</p>
+                        </div>
+                    </div>
+
+                    <div class="perfil-card">
+                        <div class="perfil-icon"><i data-lucide="wallet" style="width: 22px; height: 22px; color: #007bff;"></i></div>
+                        <div>
+                            <h3>Empresas com caixa limitado</h3>
+                            <p>Quando o capital de giro é precioso e você prefere investir em produto, vendas ou equipe, o NaaS preserva o caixa. O investimento inicial é mínimo ou zero.</p>
+                        </div>
+                    </div>
+
+                    <div class="perfil-card">
+                        <div class="perfil-icon"><i data-lucide="headset" style="width: 22px; height: 22px; color: #007bff;"></i></div>
+                        <div>
+                            <h3>Empresas sem equipe de TI interna</h3>
+                            <p>Se você não tem ninguém para cuidar da rede no dia a dia, o NaaS resolve isso. O fornecedor monitora, intervém e resolve — você não precisa entender de redes para ter uma rede funcionando.</p>
+                        </div>
+                    </div>
+
+                    <div class="perfil-card">
+                        <div class="perfil-icon"><i data-lucide="map-pin" style="width: 22px; height: 22px; color: #007bff;"></i></div>
+                        <div>
+                            <h3>Empresas com escritórios temporários ou flexíveis</h3>
+                            <p>Coworkings, filiais temporárias ou mudanças frequentes de endereço. Com NaaS, você não carrega o peso de equipamentos próprios — o contrato se adapta à sua operação.</p>
+                        </div>
+                    </div>
+
+                    <h2>Quando a infraestrutura própria faz mais sentido?</h2>
+
+                    <div class="perfil-card">
+                        <div class="perfil-icon"><i data-lucide="building" style="width: 22px; height: 22px; color: #001529;"></i></div>
+                        <div>
+                            <h3>Empresas estabelecidas com operação estável</h3>
+                            <p>Se sua equipe não vai crescer muito nos próximos anos e você tem capital disponível, comprar os equipamentos custa menos no longo prazo. Em 3 a 4 anos o investimento está pago.</p>
+                        </div>
+                    </div>
+
+                    <div class="perfil-card">
+                        <div class="perfil-icon"><i data-lucide="shield-check" style="width: 22px; height: 22px; color: #001529;"></i></div>
+                        <div>
+                            <h3>Empresas com requisitos rígidos de segurança</h3>
+                            <p>Alguns segmentos — financeiro, jurídico, saúde de alta complexidade — precisam de total controle sobre a infraestrutura. Ter os equipamentos próprios garante que nenhum terceiro tem acesso à sua rede.</p>
+                        </div>
+                    </div>
+
+                    <div class="perfil-card">
+                        <div class="perfil-icon"><i data-lucide="settings" style="width: 22px; height: 22px; color: #001529;"></i></div>
+                        <div>
+                            <h3>Empresas com equipe técnica interna</h3>
+                            <p>Se você já tem um profissional de TI que gerencia a infraestrutura, pagar mensalidade de NaaS pode ser redundante. Faz mais sentido comprar os equipamentos e gerenciar internamente.</p>
+                        </div>
+                    </div>
+
+                    <h2>O que ninguém te conta sobre o custo real do NaaS</h2>
+
+                    <p>O NaaS é atrativo na entrada, mas é importante fazer as contas no longo prazo. Uma infraestrutura de rede para um escritório de 20 pessoas em São Paulo pode custar entre R$15.000 e R$35.000 instalada — dependendo do hardware escolhido.</p>
+
+                    <p>Esse mesmo projeto em NaaS pode custar entre R$800 e R$1.800 por mês. Fazendo a conta: em 24 meses você já pagou o equivalente ao CAPEX — e continua pagando.</p>
+
+                    <div class="article-highlight">
+                        <p>NaaS não é mais barato. É mais previsível. A decisão precisa considerar fluxo de caixa, não apenas preço total.</p>
+                    </div>
+
+                    <h2>O modelo híbrido: o melhor dos dois mundos</h2>
+
+                    <p>Muitas empresas adotam um modelo intermediário: compram a infraestrutura física (switches, access points, cabeamento) — que tem longa vida útil e baixo custo de manutenção — e contratam o <strong>suporte e monitoramento como serviço</strong>.</p>
+
+                    <p>Assim você tem a economia do CAPEX no longo prazo com a tranquilidade de ter suporte técnico proativo sem precisar de equipe interna. É o modelo que a JNA Soluções recomenda para a maioria das PMEs em São Paulo.</p>
+
+                    <h2>Como a JNA Soluções pode ajudar</h2>
+
+                    <p>A JNA Soluções oferece os dois modelos — infraestrutura própria com projeto e instalação, e NaaS com mensalidade que inclui hardware, configuração, monitoramento e suporte. Começamos sempre com um <strong>diagnóstico gratuito</strong> para entender sua operação e recomendar o modelo que faz mais sentido financeiro e técnico para o seu momento.</p>
+
+                    <div class="share-bar">
+                        <span>Compartilhar:</span>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.jnasolucoes.com.br/naas-vs-infraestrutura-propria-pmes.html" target="_blank" class="share-btn" style="background: #0077b5; color: white;">
+                            <i data-lucide="linkedin" style="width: 15px; height: 15px;"></i> LinkedIn
+                        </a>
+                        <a href="https://wa.me/?text=Artigo útil sobre NaaS vs infraestrutura própria: https://www.jnasolucoes.com.br/naas-vs-infraestrutura-propria-pmes.html" target="_blank" class="share-btn" style="background: #25D366; color: white;">
+                            <i data-lucide="message-circle" style="width: 15px; height: 15px;"></i> WhatsApp
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section style="padding: 60px 0; background: #f0f6ff;">
+            <div class="container">
+                <div style="max-width: 680px; margin: 0 auto; text-align: center;" data-aos="fade-up">
+                    <i data-lucide="refresh-cw" style="width: 40px; height: 40px; color: #007bff; margin-bottom: 16px;"></i>
+                    <h2 style="color: #001529; font-size: 1.8rem; font-weight: 800; margin-bottom: 14px;">Não sabe qual modelo é melhor para sua empresa?</h2>
+                    <p style="color: #666; font-size: 1.05rem; margin-bottom: 10px;">Fazemos um diagnóstico gratuito e apresentamos os dois cenários com os custos reais para a sua realidade.</p>
+                    <p style="color: #e6a100; font-size: 0.9rem; font-weight: 700; margin-bottom: 28px; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                        <i data-lucide="alert-triangle" style="width: 16px; height: 16px;"></i> Apenas 5 vagas por mês — garanta a sua
+                    </p>
+                    <a href="https://wa.me/5511981439140?text=Olá! Li o artigo sobre NaaS e gostaria de entender qual modelo faz mais sentido para minha empresa." style="display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: white; padding: 16px 32px; border-radius: 12px; font-weight: 800; text-decoration: none; font-size: 1.05rem;">
+                        <i data-lucide="message-circle" style="width: 20px; height: 20px;"></i> Solicitar diagnóstico gratuito
+                    </a>
+                    <p style="color: #aaa; font-size: 0.85rem; margin-top: 14px; display: flex; align-items: center; justify-content: center; gap: 5px;">
+                        <i data-lucide="clock" style="width: 14px; height: 14px;"></i> Resposta em até 24h
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOLTAR -->
+        <section style="padding: 40px 0; background: white;">
+            <div class="container" style="text-align: center;">
+                <a href="blog.html" style="display: inline-flex; align-items: center; gap: 8px; color: #007bff; font-weight: 700; text-decoration: none; font-size: 0.95rem;">
+                    <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i> Voltar para o blog
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" style="padding: 40px 0; background: #001529; color: white; text-align: center;">
+        <div class="container">
+            <p>&copy; 2026 JNA Soluções - Especialistas em Infraestrutura de Redes</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Atendimento especializado em todo o Brasil.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 800, once: true });
+        function toggleMenu() {
+            var menu = document.getElementById('mobile-menu');
+            var btn  = document.getElementById('hamburger');
+            var open = menu.style.display === 'flex';
+            menu.style.display = open ? 'none' : 'flex';
+            btn.classList.toggle('open', !open);
+            lucide.createIcons();
+        }
+        function closeMenu() {
+            document.getElementById('mobile-menu').style.display = 'none';
+            document.getElementById('hamburger').classList.remove('open');
+        }
+        document.addEventListener('click', function(e) {
+            var menu = document.getElementById('mobile-menu');
+            var btn  = document.getElementById('hamburger');
+            if (menu.style.display === 'flex' && !menu.contains(e.target) && !btn.contains(e.target)) { closeMenu(); }
+        });
+    </script>
+</body>
+</html>
 
