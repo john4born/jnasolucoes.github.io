@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TJXNZSLM');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade | JNA Soluções</title>
+    <meta name="description" content="Saiba como a JNA Soluções coleta, usa e protege os dados pessoais de quem visita o site e solicita contato, em conformidade com a LGPD.">
+    <link rel="canonical" href="https://www.jnasolucoes.com.br/politica-privacidade.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css?v=10">
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJXNZSLM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" aria-label="JNA Soluções - voltar ao início"><img src="logo.png" alt="JNA Soluções" class="logo-top"></a>
+            <a href="index.html" class="btn-outline">&larr; Voltar ao site</a>
+        </div>
+    </header>
+
+    <main class="legal-main">
+        <div class="container">
+            <article class="legal-card">
+                <h1>Política de Privacidade</h1>
+                <p class="legal-updated">Última atualização: 23 de novembro de 2026</p>
+
+                <p>A <strong>JNA Soluções</strong> respeita a sua privacidade. Esta política explica, de forma simples, quais dados pessoais coletamos quando você visita o site <strong>jnasolucoes.com.br</strong> ou pede um diagnóstico, para que usamos esses dados e quais são os seus direitos, conforme a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018).</p>
+
+                <h2>1. Quem é o responsável pelos dados</h2>
+                <p>O responsável pelo tratamento dos dados coletados neste site é a JNA Soluções, empresa de infraestrutura de redes e Wi-Fi corporativo, com atendimento em todo o Brasil.</p>
+                <!-- PREENCHER: razão social e CNPJ da JNA Soluções, se desejar exibir aqui -->
+                <p>Para falar sobre seus dados: <a href="mailto:contato@jnasolucoes.com.br">contato@jnasolucoes.com.br</a> ou WhatsApp <a href="https://wa.me/5511981439140">(11) 98143-9140</a>.</p>
+
+                <h2>2. Quais dados coletamos</h2>
+                <p><strong>Dados que você nos informa</strong> ao usar o formulário de diagnóstico ou ao falar conosco:</p>
+                <ul>
+                    <li>tipo de empresa, serviço de interesse e urgência;</li>
+                    <li>nome e/ou nome da empresa;</li>
+                    <li>número de WhatsApp e, se informado, e-mail corporativo;</li>
+                    <li>número aproximado de usuários da rede;</li>
+                    <li>observações que você escrever no campo de detalhes.</li>
+                </ul>
+                <p><strong>Dados de navegação</strong>, coletados automaticamente: endereço IP, tipo de navegador e dispositivo, páginas acessadas e data e hora do acesso.</p>
+
+                <h2>3. Como funciona o formulário</h2>
+                <p>O formulário do site não guarda as suas respostas em um banco de dados. Ao final, ele monta uma mensagem e abre uma conversa no WhatsApp com a JNA. A partir desse envio, a conversa também passa a ser regida pelas regras de privacidade do WhatsApp (Meta).</p>
+
+                <h2>4. Para que usamos os dados</h2>
+                <ul>
+                    <li>responder ao seu contato e agendar o diagnóstico gratuito da rede;</li>
+                    <li>elaborar propostas e prestar os serviços contratados;</li>
+                    <li>entender como o site é usado e melhorar a experiência;</li>
+                    <li>manter a segurança do site e cumprir obrigações legais.</li>
+                </ul>
+                <p>Não vendemos os seus dados e não os usamos para fins que você não esperaria ao entrar em contato conosco.</p>
+
+                <h2>5. Bases legais</h2>
+                <p>Tratamos os dados com base no seu <strong>consentimento</strong> (ao enviar o formulário e aceitar cookies), na execução de procedimentos preliminares a um contrato solicitados por você, no cumprimento de obrigação legal e no <strong>legítimo interesse</strong> da JNA em manter e melhorar o site e o atendimento.</p>
+
+                <h2>6. Cookies e serviços de terceiros</h2>
+                <p>O site usa cookies e armazenamento local do navegador. Registramos, por exemplo, que você aceitou o aviso de cookies, para não exibi-lo novamente.</p>
+                <p>Para funcionar, o site carrega recursos de terceiros, que podem receber seu endereço IP e dados do navegador: Google Tag Manager e Google Fonts (Google) e a biblioteca de ícones e animações servida por unpkg. As avaliações exibidas no site vêm do Google, e o link para elas leva ao Google Maps, que tem política própria.</p>
+                <p>Você pode apagar ou bloquear cookies nas configurações do seu navegador. Algumas partes do site podem funcionar de forma diferente se você fizer isso.</p>
+
+                <h2>7. Com quem compartilhamos</h2>
+                <p>Compartilhamos dados apenas quando necessário: com serviços usados para operar o site e o atendimento (como WhatsApp e Google), com prestadores que nos ajudam a entregar o serviço contratado e com autoridades, quando a lei exigir.</p>
+
+                <h2>8. Por quanto tempo guardamos</h2>
+                <p>Guardamos os dados pelo tempo necessário para atender ao seu pedido, executar o contrato e cumprir prazos legais. Depois disso, eles são eliminados ou anonimizados.</p>
+
+                <h2>9. Seus direitos</h2>
+                <p>Pela LGPD, você pode pedir a qualquer momento:</p>
+                <ul>
+                    <li>confirmação de que tratamos seus dados e acesso a eles;</li>
+                    <li>correção de dados incompletos, inexatos ou desatualizados;</li>
+                    <li>anonimização, bloqueio ou eliminação de dados desnecessários;</li>
+                    <li>portabilidade dos dados;</li>
+                    <li>informação sobre com quem compartilhamos seus dados;</li>
+                    <li>revogação do consentimento e eliminação dos dados tratados com base nele.</li>
+                </ul>
+                <p>Para exercer esses direitos, escreva para <a href="mailto:contato@jnasolucoes.com.br">contato@jnasolucoes.com.br</a>. Você também pode recorrer à Autoridade Nacional de Proteção de Dados (ANPD).</p>
+
+                <h2>10. Segurança</h2>
+                <p>Adotamos medidas técnicas e organizacionais para proteger os dados contra acesso não autorizado, perda e alteração. Nenhum sistema é totalmente imune a falhas, e por isso pedimos que você não envie senhas ou dados sensíveis pelo formulário.</p>
+
+                <h2>11. Público do site</h2>
+                <p>Este site é voltado a empresas e profissionais. Não coletamos intencionalmente dados de crianças e adolescentes.</p>
+
+                <h2>12. Alterações nesta política</h2>
+                <p>Podemos atualizar esta política para refletir mudanças no site ou na lei. A data da última atualização fica sempre no início desta página.</p>
+
+                <h2>13. Fale com a gente</h2>
+                <p>Ficou com alguma dúvida? Escreva para <a href="mailto:contato@jnasolucoes.com.br">contato@jnasolucoes.com.br</a>. Respondemos em até 24 horas úteis.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer-top">
+            <div class="sf-brand">
+                <img src="logo.png" alt="JNA Soluções" class="sf-logo">
+                <p>Redes estáveis, Wi-Fi corporativo e suporte técnico para manter a sua empresa conectada e operando. Mais de 10 anos de experiência.</p>
+                <a href="https://wa.me/5511981439140?text=Olá! Minha rede está instável e preciso de ajuda." class="sf-cta" target="_blank" rel="noopener"><span class="sf-dot"></span> Rede instável? Fale agora</a>
+            </div>
+            <nav class="sf-col" aria-label="Soluções">
+                <h4>Soluções</h4>
+                <ul>
+                    <li><a href="index.html#solucoes">Wi-Fi Corporativo</a></li>
+                    <li><a href="index.html#solucoes">Cabeamento Estruturado</a></li>
+                    <li><a href="index.html#solucoes">Análise e Diagnóstico</a></li>
+                    <li><a href="index.html#solucoes">Segurança de Rede</a></li>
+                    <li><a href="index.html#solucoes">Monitoramento Proativo</a></li>
+                    <li><a href="index.html#solucoes">Rede como Serviço (NaaS)</a></li>
+                    <li><a href="index.html#solucoes">Consultoria Bilíngue</a></li>
+                </ul>
+            </nav>
+            <nav class="sf-col" aria-label="A JNA">
+                <h4>A JNA</h4>
+                <ul>
+                    <li><a href="index.html#quem-somos">Quem Somos</a></li>
+                    <li><a href="index.html#segmentos">Segmentos atendidos</a></li>
+                    <li><a href="index.html#resultados">Resultados</a></li>
+                    <li><a href="index.html#avaliacoes">Avaliações</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                </ul>
+            </nav>
+            <div class="sf-col">
+                <h4>Contato</h4>
+                <ul class="sf-contact">
+                    <li><i data-lucide="phone"></i><span>(11) 98143-9140</span></li>
+                    <li><i data-lucide="message-circle"></i><a href="https://wa.me/5511981439140" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><i data-lucide="mail"></i><a href="mailto:contato@jnasolucoes.com.br">contato@jnasolucoes.com.br</a></li>
+                    <li><i data-lucide="globe"></i><span>Atendimento em todo o Brasil</span></li>
+                    <li><i data-lucide="clock"></i><span>Resposta em até 24h</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sf-bottom">
+            <div class="container sf-bottom-in">
+                <div>
+                    <strong>&copy; 2026 JNA Soluções. Todos os direitos reservados.</strong>
+                    <small>Este site usa cookies essenciais. Veja a <a href="politica-privacidade.html">Política de Privacidade</a>.</small>
+                </div>
+                <span class="sf-tag">Redes que funcionam.<br>Suporte que responde.</span>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5511981439140?text=Olá! Vim pelo site da JNA e gostaria de falar com um especialista." class="wa-float" target="_blank" rel="noopener" aria-label="Falar com a JNA pelo WhatsApp">
+        <i data-lucide="message-circle"></i><span>Fale conosco</span>
+    </a>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container cookie-content">
+            <p>Utilizamos cookies essenciais para oferecer a melhor experiência. Ao navegar, você concorda.</p>
+            <button id="accept-cookies" class="btn-cookie">Li e aceito</button>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        document.addEventListener("DOMContentLoaded", function() {
+            var banner = document.getElementById("cookie-banner");
+            var btn = document.getElementById("accept-cookies");
+            if (!localStorage.getItem("cookiesAceitos")) { banner.style.display = "block"; }
+            btn.addEventListener("click", function() {
+                localStorage.setItem("cookiesAceitos", "true");
+                banner.style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>
