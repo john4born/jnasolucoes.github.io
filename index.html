@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=8">
+    <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJXNZSLM"
@@ -368,43 +368,188 @@
         <!-- SOLUÇÕES -->
         <section id="solucoes" class="services-premium">
             <div class="container">
-                <div class="section-header">
-                    <h2>Soluções Profissionais e Objetivas</h2>
+                <div class="svc-head" data-aos="fade-up">
+                    <span class="svc-eyebrow">Soluções profissionais e objetivas</span>
+                    <h2>Tudo o que sua rede precisa</h2>
+                    <p>Escolha uma área e veja o que está incluso, sem sair da página.</p>
                 </div>
-                <div class="services-grid">
-                    <div class="s-card" data-aos="fade-up">
-                        <i data-lucide="wifi"></i>
-                        <h3>Wi-Fi Corporativo de Alta Performance</h3>
-                        <p>Conexão estável e rápida para empresas e clientes.</p>
+
+                <div class="svc-layout" data-aos="fade-up">
+
+                    <!-- ABAS -->
+                    <div class="svc-tabs" role="tablist" aria-label="Soluções da JNA" aria-orientation="vertical">
+                        <button type="button" class="svc-tab" role="tab" id="svc-tab-0" aria-controls="svc-panel-0" aria-selected="true" tabindex="0"><strong>Wi-Fi Corporativo</strong><span>Alta performance</span></button>
+                        <button type="button" class="svc-tab" role="tab" id="svc-tab-1" aria-controls="svc-panel-1" aria-selected="false" tabindex="-1"><strong>Cabeamento CAT6 e 6A</strong><span>Redes organizadas</span></button>
+                        <button type="button" class="svc-tab" role="tab" id="svc-tab-2" aria-controls="svc-panel-2" aria-selected="false" tabindex="-1"><strong>Análise e Diagnóstico</strong><span>Elimine gargalos</span></button>
+                        <button type="button" class="svc-tab" role="tab" id="svc-tab-3" aria-controls="svc-panel-3" aria-selected="false" tabindex="-1"><strong>Segurança de rede</strong><span>Proteção e controle</span></button>
+                        <button type="button" class="svc-tab" role="tab" id="svc-tab-4" aria-controls="svc-panel-4" aria-selected="false" tabindex="-1"><strong>Monitoramento Proativo</strong><span>Evite falhas</span></button>
+                        <button type="button" class="svc-tab" role="tab" id="svc-tab-5" aria-controls="svc-panel-5" aria-selected="false" tabindex="-1"><strong>Rede como Serviço (NaaS)</strong><span>Sem CAPEX alto</span></button>
+                        <button type="button" class="svc-tab" role="tab" id="svc-tab-6" aria-controls="svc-panel-6" aria-selected="false" tabindex="-1"><strong>Consultoria Bilíngue</strong><span>Reuniões internacionais</span></button>
                     </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="100">
-                        <i data-lucide="cable"></i>
-                        <h3>Cabeamento Estruturado CAT6 e 6A</h3>
-                        <p>Redes cabeadas organizadas e preparadas para altas taxas.</p>
-                    </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="200">
-                        <i data-lucide="activity"></i>
-                        <h3>Análise e Diagnóstico de Rede</h3>
-                        <p>Diagnóstico preciso para identificar e eliminar gargalos.</p>
-                    </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="300">
-                        <i data-lucide="monitor"></i>
-                        <h3>Suporte e Monitoramento Proativo</h3>
-                        <p>Manutenção preventiva para evitar falhas inesperadas.</p>
-                    </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="400">
-                        <i data-lucide="languages"></i>
-                        <h3>Consultoria Técnica Bilíngue (Inglês)</h3>
-                        <p>Intermediação técnica global e suporte especializado para reuniões internacionais.</p>
-                    </div>
-                    <div class="s-card" data-aos="fade-up" data-aos-delay="500">
-                        <i data-lucide="refresh-cw"></i>
-                        <h3>Rede como Serviço (NaaS)</h3>
-                        <p>Hardware, setup e gestão inclusos em uma mensalidade previsível. Elimine custos altos de CAPEX.</p>
+
+                    <!-- PAINÉIS -->
+                    <div class="svc-panels">
+
+                        <div class="svc-panel" role="tabpanel" id="svc-panel-0" aria-labelledby="svc-tab-0">
+                            <h3>Wi-Fi Corporativo de Alta Performance</h3>
+                            <p class="svc-tag">Conexão estável e rápida para empresas e clientes.</p>
+                            <p class="svc-desc">Projeto, instalação e ajuste fino para centenas de acessos simultâneos.</p>
+                            <ul class="svc-list">
+                                <li>Site survey</li>
+                                <li>Roaming automático</li>
+                                <li>Wi-Fi para visitantes</li>
+                                <li>Load balancing</li>
+                            </ul>
+                            <div class="svc-actions">
+                                <a class="svc-btn" href="https://wa.me/5511981439140?text=Olá! Gostaria de uma proposta de Wi-Fi Corporativo para minha empresa.">Quero uma proposta</a>
+                                <a class="svc-btn svc-btn-outline" href="#contato">Ver solução completa</a>
+                            </div>
+                            <a class="svc-pill" href="#contato">Sua rede está lenta? Faça o diagnóstico gratuito</a>
+                        </div>
+
+                        <div class="svc-panel" role="tabpanel" id="svc-panel-1" aria-labelledby="svc-tab-1" hidden>
+                            <h3>Cabeamento Estruturado CAT6 e 6A</h3>
+                            <p class="svc-tag">Redes cabeadas organizadas e preparadas para altas taxas.</p>
+                            <p class="svc-desc">Infraestrutura física certificada, pronta para crescer.</p>
+                            <ul class="svc-list">
+                                <li>Cabeamento certificado</li>
+                                <li>Racks organizados</li>
+                                <li>Switches e VLANs</li>
+                                <li>Integração de filiais</li>
+                            </ul>
+                            <div class="svc-actions">
+                                <a class="svc-btn" href="https://wa.me/5511981439140?text=Olá! Gostaria de uma proposta de Cabeamento Estruturado para minha empresa.">Quero uma proposta</a>
+                                <a class="svc-btn svc-btn-outline" href="#contato">Ver solução completa</a>
+                            </div>
+                            <a class="svc-pill" href="#contato">Sua rede está lenta? Faça o diagnóstico gratuito</a>
+                        </div>
+
+                        <div class="svc-panel" role="tabpanel" id="svc-panel-2" aria-labelledby="svc-tab-2" hidden>
+                            <h3>Análise e Diagnóstico de Rede</h3>
+                            <p class="svc-tag">Diagnóstico preciso para identificar e eliminar gargalos.</p>
+                            <p class="svc-desc">Análise técnica completa, com relatório do que corrigir primeiro.</p>
+                            <ul class="svc-list">
+                                <li>Medição de cobertura</li>
+                                <li>Análise de links</li>
+                                <li>Mapa de pontos de falha</li>
+                                <li>Plano de ação priorizado</li>
+                            </ul>
+                            <div class="svc-actions">
+                                <a class="svc-btn" href="https://wa.me/5511981439140?text=Olá! Gostaria de agendar o diagnóstico gratuito da rede para minha empresa.">Agendar diagnóstico</a>
+                                <a class="svc-btn svc-btn-outline" href="#contato">Ver solução completa</a>
+                            </div>
+                            <a class="svc-pill" href="#contato">Sua rede está lenta? Faça o diagnóstico gratuito</a>
+                        </div>
+
+                        <div class="svc-panel" role="tabpanel" id="svc-panel-3" aria-labelledby="svc-tab-3" hidden>
+                            <h3>Segurança de rede</h3>
+                            <p class="svc-tag">Proteção e controle de acesso.</p>
+                            <p class="svc-desc">Firewall, segmentação e regras de acesso para reduzir risco e apoiar a LGPD.</p>
+                            <ul class="svc-list">
+                                <li>Firewall</li>
+                                <li>VLANs e ACLs</li>
+                                <li>VPN site-to-site</li>
+                                <li>Captive portal</li>
+                            </ul>
+                            <div class="svc-actions">
+                                <a class="svc-btn" href="https://wa.me/5511981439140?text=Olá! Gostaria de uma proposta de Segurança de Rede para minha empresa.">Quero uma proposta</a>
+                                <a class="svc-btn svc-btn-outline" href="#contato">Ver solução completa</a>
+                            </div>
+                            <a class="svc-pill" href="#contato">Sua rede está segura? Faça o diagnóstico gratuito</a>
+                        </div>
+
+                        <div class="svc-panel" role="tabpanel" id="svc-panel-4" aria-labelledby="svc-tab-4" hidden>
+                            <h3>Suporte e Monitoramento Proativo</h3>
+                            <p class="svc-tag">Manutenção preventiva para evitar falhas inesperadas.</p>
+                            <p class="svc-desc">Painel de links, switches e APs com alertas antes de a falha chegar ao usuário.</p>
+                            <ul class="svc-list">
+                                <li>Alertas em tempo real</li>
+                                <li>Relatório mensal</li>
+                                <li>SLA ajustado</li>
+                                <li>Suporte remoto e presencial</li>
+                            </ul>
+                            <div class="svc-actions">
+                                <a class="svc-btn" href="https://wa.me/5511981439140?text=Olá! Gostaria de uma proposta de Suporte e Monitoramento Proativo para minha empresa.">Quero uma proposta</a>
+                                <a class="svc-btn svc-btn-outline" href="#contato">Ver solução completa</a>
+                            </div>
+                            <a class="svc-pill" href="#contato">Sua rede está lenta? Faça o diagnóstico gratuito</a>
+                        </div>
+
+                        <div class="svc-panel" role="tabpanel" id="svc-panel-5" aria-labelledby="svc-tab-5" hidden>
+                            <h3>Rede como Serviço (NaaS)</h3>
+                            <p class="svc-tag">Hardware, setup e gestão inclusos em uma mensalidade previsível.</p>
+                            <p class="svc-desc">Elimine custos altos de CAPEX e tenha alguém responsável pela rede.</p>
+                            <ul class="svc-list">
+                                <li>Equipamentos inclusos</li>
+                                <li>Instalação e configuração</li>
+                                <li>Gestão contínua</li>
+                                <li>Mensalidade previsível</li>
+                            </ul>
+                            <div class="svc-actions">
+                                <a class="svc-btn" href="https://wa.me/5511981439140?text=Olá! Gostaria de uma proposta de Rede como Serviço (NaaS) para minha empresa.">Quero uma proposta</a>
+                                <a class="svc-btn svc-btn-outline" href="#contato">Ver solução completa</a>
+                            </div>
+                            <a class="svc-pill" href="#contato">Sua rede está lenta? Faça o diagnóstico gratuito</a>
+                        </div>
+
+                        <div class="svc-panel" role="tabpanel" id="svc-panel-6" aria-labelledby="svc-tab-6" hidden>
+                            <h3>Consultoria Técnica Bilíngue (Inglês)</h3>
+                            <p class="svc-tag">Intermediação técnica global para reuniões internacionais.</p>
+                            <p class="svc-desc">Suporte especializado para quando o assunto técnico precisa ser tratado em inglês.</p>
+                            <ul class="svc-list">
+                                <li>Reuniões técnicas em inglês</li>
+                                <li>Intermediação com fornecedores</li>
+                                <li>Suporte especializado</li>
+                            </ul>
+                            <div class="svc-actions">
+                                <a class="svc-btn" href="https://wa.me/5511981439140?text=Olá! Gostaria de saber mais sobre a Consultoria Técnica Bilíngue.">Quero uma proposta</a>
+                                <a class="svc-btn svc-btn-outline" href="#contato">Ver solução completa</a>
+                            </div>
+                            <a class="svc-pill" href="#contato">Sua rede está lenta? Faça o diagnóstico gratuito</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
+
+        <script>
+        (function () {
+            var tabs = Array.prototype.slice.call(document.querySelectorAll('#solucoes .svc-tab'));
+            var panels = Array.prototype.slice.call(document.querySelectorAll('#solucoes .svc-panel'));
+            if (!tabs.length) return;
+
+            function show(i, focus) {
+                tabs.forEach(function (t, n) {
+                    var on = n === i;
+                    t.setAttribute('aria-selected', on ? 'true' : 'false');
+                    t.setAttribute('tabindex', on ? '0' : '-1');
+                });
+                panels.forEach(function (p, n) { p.hidden = n !== i; });
+
+                var box = tabs[i].parentNode;
+                if (box.scrollWidth > box.clientWidth) {
+                    box.scrollTo({
+                        left: tabs[i].offsetLeft - (box.clientWidth - tabs[i].offsetWidth) / 2,
+                        behavior: 'smooth'
+                    });
+                }
+                if (focus) tabs[i].focus();
+            }
+
+            tabs.forEach(function (t, i) {
+                t.addEventListener('click', function () { show(i, false); });
+                t.addEventListener('keydown', function (e) {
+                    var k = e.key, n = null;
+                    if (k === 'ArrowDown' || k === 'ArrowRight') n = (i + 1) % tabs.length;
+                    else if (k === 'ArrowUp' || k === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+                    else if (k === 'Home') n = 0;
+                    else if (k === 'End') n = tabs.length - 1;
+                    if (n !== null) { e.preventDefault(); show(n, true); }
+                });
+            });
+        })();
+        </script>
 
         <!-- CONTATO — FORMULÁRIO DE QUALIFICAÇÃO -->
         <section id="contato" style="padding: 80px 0; background-color: #ffffff;">
@@ -742,28 +887,6 @@
             .btn-outline-desktop { display: none !important; }
             #hamburger { display: flex !important; }
         }
-
-        /* Menu hamburguer */
-        function toggleMenu() {
-            var menu = document.getElementById('mobile-menu');
-            var btn  = document.getElementById('hamburger');
-            var open = menu.style.display === 'flex';
-            menu.style.display = open ? 'none' : 'flex';
-            btn.classList.toggle('open', !open);
-            lucide.createIcons();
-        }
-        function closeMenu() {
-            document.getElementById('mobile-menu').style.display = 'none';
-            document.getElementById('hamburger').classList.remove('open');
-        }
-        // Fechar ao clicar fora
-        document.addEventListener('click', function(e) {
-            var menu = document.getElementById('mobile-menu');
-            var btn  = document.getElementById('hamburger');
-            if (menu.style.display === 'flex' && !menu.contains(e.target) && !btn.contains(e.target)) {
-                closeMenu();
-            }
-        });
 
         /* Carrossel de avaliações */
         .rev-card {
