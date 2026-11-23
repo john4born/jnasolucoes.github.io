@@ -120,7 +120,65 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
 .cookie-content { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
 .btn-cookie { background: var(--primary); border: none; color: white; padding: 12px 30px; border-radius: 10px; font-weight: 800; cursor: pointer; }
 
-.footer { text-align: center; padding: 50px; color: white; opacity: 0.6; }
+/* FOOTER */
+.site-footer { background: #001529; color: #9fb0c7; font-size: 15px; background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 22px 22px; }
+.site-footer-top { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1.2fr; gap: 40px; padding-top: 64px; padding-bottom: 48px; }
+.sf-logo { height: 56px; width: auto; filter: brightness(0) invert(1); margin-bottom: 18px; }
+.sf-brand p { line-height: 1.7; max-width: 36ch; }
+.sf-cta { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; background: var(--primary); color: #fff; font-weight: 800; font-size: 13px; letter-spacing: 0.03em; text-transform: uppercase; text-decoration: none; border-radius: 12px; padding: 14px 22px; box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.25); transition: 0.3s; }
+.sf-cta:hover { background: var(--primary-dark); transform: translateY(-2px); }
+.sf-dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; flex-shrink: 0; }
+.sf-col h4 { color: #fff; font-size: 16px; font-weight: 800; margin-bottom: 18px; }
+.sf-col ul { list-style: none; display: grid; gap: 13px; }
+.sf-col a { color: #9fb0c7; text-decoration: none; transition: color 0.2s; }
+.sf-col a:hover { color: #fff; }
+.sf-contact li { display: flex; align-items: flex-start; gap: 12px; }
+.sf-contact svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; color: #5B9BFF; }
+.sf-bottom { background: #000d1a; padding: 24px 0; }
+.sf-bottom-in { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 14px 30px; }
+.sf-bottom strong { display: block; color: #fff; font-size: 14px; margin-bottom: 8px; }
+.sf-bottom small { font-size: 12px; }
+.sf-bottom small a { color: #cbd5e1; }
+.sf-tag { color: #fff; font-size: 12px; font-weight: 700; text-align: right; line-height: 1.4; }
+.site-footer a:focus-visible, .wa-float:focus-visible { outline: 3px solid #5B9BFF; outline-offset: 3px; }
+@media (max-width: 900px) {
+    .site-footer-top { grid-template-columns: 1fr 1fr; gap: 36px; padding-top: 48px; }
+    .sf-tag { text-align: left; }
+}
+@media (max-width: 560px) {
+    .site-footer-top { grid-template-columns: 1fr; }
+}
+
+/* BOTÃO FLUTUANTE DE WHATSAPP */
+.wa-float { position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 900; display: flex; align-items: center; gap: 10px; background: var(--success); color: #fff; text-decoration: none; font-weight: 800; font-size: 15px; padding: 14px 22px; border-radius: 50px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); transition: 0.3s; animation: wa-pulse 2.2s infinite; }
+.wa-float svg { width: 24px; height: 24px; }
+.wa-float:hover { transform: translateY(-3px); background: #1ebe5d; }
+@keyframes wa-pulse {
+    0%   { box-shadow: 0 10px 25px rgba(0,0,0,0.25), 0 0 0 0 rgba(37, 211, 102, 0.55); }
+    70%  { box-shadow: 0 10px 25px rgba(0,0,0,0.25), 0 0 0 14px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 10px 25px rgba(0,0,0,0.25), 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+@media (max-width: 600px) {
+    .wa-float { right: 16px; padding: 15px; }
+    .wa-float span { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .wa-float { animation: none; } }
+
+/* PÁGINA DE POLÍTICA DE PRIVACIDADE */
+.legal-main { padding: 60px 0 80px; }
+.legal-card { max-width: 860px; margin: 0 auto; background: #fff; border-radius: 24px; padding: 56px; box-shadow: var(--shadow); }
+.legal-card h1 { font-size: 2.4rem; letter-spacing: -1px; margin-bottom: 8px; }
+.legal-updated { color: #64748B; font-size: 0.9rem; margin-bottom: 28px; }
+.legal-card h2 { color: var(--dark-blue); font-size: 1.25rem; font-weight: 800; margin: 34px 0 10px; }
+.legal-card p { margin-bottom: 14px; }
+.legal-card ul { margin: 0 0 14px 22px; }
+.legal-card li { margin-bottom: 6px; }
+.legal-card a { color: var(--primary); font-weight: 600; }
+@media (max-width: 700px) {
+    .legal-main { padding: 36px 0 56px; }
+    .legal-card { padding: 28px 22px; border-radius: 18px; }
+    .legal-card h1 { font-size: 1.8rem; }
+}
 
 /* RESPONSIVO */
 @media (max-width: 900px) {
