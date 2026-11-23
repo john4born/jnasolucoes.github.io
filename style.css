@@ -195,6 +195,50 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
 .sec-soft { background: #F8FAFC; }
 @media (max-width: 900px) { .sec { padding: 60px 0; } }
 
+/* COMO TRABALHAMOS */
+.how-steps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; position: relative; counter-reset: none; }
+.how-step { position: relative; background: #fff; border: 1px solid #E2E8F0; border-radius: 20px; padding: 32px 24px 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
+.how-num { position: absolute; top: -18px; left: 24px; width: 36px; height: 36px; border-radius: 50%; background: var(--primary); color: #fff; font-weight: 900; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 5px #F8FAFC; }
+.how-step > i, .how-step > svg { width: 30px; height: 30px; color: var(--primary); margin-bottom: 14px; stroke-width: 2; }
+.how-step h3 { color: var(--dark-blue); font-size: 1.15rem; font-weight: 800; margin-bottom: 8px; line-height: 1.25; }
+.how-step p { font-size: 0.95rem; color: var(--text-main); }
+.how-cta { text-align: center; margin-top: 44px; }
+
+/* NETWORKCARE */
+.nc-section { padding: 90px 0; background: var(--dark-blue); background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 22px 22px; color: #CBD5E1; }
+.nc-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 56px; align-items: center; }
+.nc-eyebrow { display: inline-block; color: #5B9BFF; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 14px; }
+.nc-badge { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px 12px; background: rgba(37,211,102,0.14); border: 1px solid rgba(37,211,102,0.5); color: #6EE7A0; font-weight: 800; font-size: 0.8rem; border-radius: 50px; padding: 6px 14px; vertical-align: 2px; }
+.nc-badge svg { width: 16px; height: 16px; }
+.nc-text h2 { color: #fff; font-size: 2.4rem; font-weight: 900; letter-spacing: -1px; line-height: 1.12; margin-bottom: 16px; }
+.nc-text > p { font-size: 1.05rem; margin-bottom: 24px; }
+.nc-list { list-style: none; display: grid; gap: 12px; margin-bottom: 32px; }
+.nc-list li { position: relative; padding-left: 32px; color: #fff; font-weight: 600; }
+.nc-list li::before { content: ""; position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border-radius: 50%; background: var(--primary); }
+.nc-list li::after { content: ""; position: absolute; left: 6px; top: 6px; width: 10px; height: 5px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg); }
+.nc-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+.nc-link { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
+.nc-link:hover { color: #5B9BFF; }
+.nc-panel { background: #0B1B33; border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 22px; box-shadow: 0 24px 60px rgba(0,0,0,0.35); }
+.nc-panel-head { display: flex; justify-content: space-between; align-items: center; color: #fff; font-weight: 800; margin-bottom: 14px; }
+.nc-panel-head em { font-style: normal; font-size: 0.72rem; font-weight: 700; color: #94A3B8; border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; padding: 3px 10px; }
+.nc-row { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; align-items: center; gap: 12px; background: rgba(255,255,255,0.05); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+.nc-row strong { color: #fff; font-size: 0.95rem; }
+.nc-row small { color: #94A3B8; font-size: 0.82rem; }
+.nc-dot { width: 10px; height: 10px; border-radius: 50%; }
+.nc-dot.ok { background: var(--success); box-shadow: 0 0 0 4px rgba(37,211,102,0.2); }
+.nc-dot.warn { background: #F59E0B; box-shadow: 0 0 0 4px rgba(245,158,11,0.25); }
+.nc-alert { margin-top: 6px; background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.4); color: #FCD34D; border-radius: 12px; padding: 12px 14px; font-size: 0.85rem; font-weight: 600; }
+@media (max-width: 900px) {
+    .nc-badge { display: flex; width: fit-content; margin: 0 0 16px; }
+    .how-steps { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+    .nc-section { padding: 64px 0; }
+    .nc-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+    .nc-text h2 { font-size: 1.9rem; }
+    .nc-actions .btn-primary { flex: 1 1 100%; text-align: center; }
+}
+@media (min-width: 901px) and (max-width: 1100px) { .how-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 20px; } }
+
 /* REMOVER PROPAGANDA E LINKS DO TRUSTINDEX */
 .ti-footer, .ti-base-link {
     display: none !important;
