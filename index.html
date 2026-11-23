@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJXNZSLM"
@@ -647,6 +647,7 @@
                                     <option>Mais de 200 usuários</option>
                                 </select>
                             </div>
+                            <p style="font-size:0.8rem;color:#888;line-height:1.5;margin:0 0 18px;">Usamos esses dados apenas para retornar o seu contato. Veja a <a href="politica-privacidade.html" target="_blank" rel="noopener" style="color:#007bff;font-weight:700;">Política de Privacidade</a>.</p>
                             <div style="display: flex; gap: 10px;">
                                 <button class="jna-btn-back" onclick="jnaBack(3)"><i data-lucide="arrow-left" style="width:15px;height:15px;vertical-align:middle;"></i> Voltar</button>
                                 <button class="jna-btn-next" id="jna-n3" onclick="jnaNext(3)" disabled>Próximo <i data-lucide="arrow-right" style="width:16px;height:16px;vertical-align:middle;"></i></button>
@@ -661,6 +662,7 @@
                                 <label style="display:block;font-size:0.85rem;font-weight:700;color:#444;margin-bottom:6px;">Algum detalhe adicional? (opcional)</label>
                                 <textarea id="jna-obs" placeholder="Ex: a rede cai toda segunda-feira, temos 3 andares..." rows="3" oninput="jnaDados.obs=this.value" style="width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:10px;font-size:0.95rem;resize:vertical;"></textarea>
                             </div>
+                            <p style="font-size:0.8rem;color:#888;line-height:1.5;margin:0 0 18px;">Ao enviar, você concorda com a <a href="politica-privacidade.html" target="_blank" rel="noopener" style="color:#007bff;font-weight:700;">Política de Privacidade</a>.</p>
                             <div style="display: flex; gap: 10px;">
                                 <button class="jna-btn-back" onclick="jnaBack(4)"><i data-lucide="arrow-left" style="width:15px;height:15px;vertical-align:middle;"></i> Voltar</button>
                                 <button class="jna-btn-next jna-btn-whatsapp" onclick="jnaEnviar()"><i data-lucide="message-circle" style="width:17px;height:17px;vertical-align:middle;margin-right:4px;"></i> Enviar via WhatsApp</button>
@@ -816,16 +818,66 @@
 
     </main>
 
-    <footer class="footer" style="padding: 40px 0; background: #001529; color: white; text-align: center;">
-        <div class="container">
-            <p>&copy; 2026 JNA Soluções - Especialistas em Infraestrutura de Redes</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Atendimento especializado em todo o Brasil.</p>
+    <footer class="site-footer">
+        <div class="container site-footer-top">
+            <div class="sf-brand">
+                <img src="logo.png" alt="JNA Soluções" class="sf-logo">
+                <p>Redes estáveis, Wi-Fi corporativo e suporte técnico para manter a sua empresa conectada e operando. Mais de 10 anos de experiência.</p>
+                <a href="https://wa.me/5511981439140?text=Olá! Minha rede está instável e preciso de ajuda." class="sf-cta" target="_blank" rel="noopener"><span class="sf-dot"></span> Rede instável? Fale agora</a>
+            </div>
+            <nav class="sf-col" aria-label="Soluções">
+                <h4>Soluções</h4>
+                <ul>
+                    <li><a href="index.html#solucoes">Wi-Fi Corporativo</a></li>
+                    <li><a href="index.html#solucoes">Cabeamento Estruturado</a></li>
+                    <li><a href="index.html#solucoes">Análise e Diagnóstico</a></li>
+                    <li><a href="index.html#solucoes">Segurança de Rede</a></li>
+                    <li><a href="index.html#solucoes">Monitoramento Proativo</a></li>
+                    <li><a href="index.html#solucoes">Rede como Serviço (NaaS)</a></li>
+                    <li><a href="index.html#solucoes">Consultoria Bilíngue</a></li>
+                </ul>
+            </nav>
+            <nav class="sf-col" aria-label="A JNA">
+                <h4>A JNA</h4>
+                <ul>
+                    <li><a href="index.html#quem-somos">Quem Somos</a></li>
+                    <li><a href="index.html#segmentos">Segmentos atendidos</a></li>
+                    <li><a href="index.html#resultados">Resultados</a></li>
+                    <li><a href="index.html#avaliacoes">Avaliações</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                </ul>
+            </nav>
+            <div class="sf-col">
+                <h4>Contato</h4>
+                <ul class="sf-contact">
+                    <li><i data-lucide="phone"></i><span>(11) 98143-9140</span></li>
+                    <li><i data-lucide="message-circle"></i><a href="https://wa.me/5511981439140" target="_blank" rel="noopener">WhatsApp</a></li>
+                    <li><i data-lucide="mail"></i><a href="mailto:contato@jnasolucoes.com.br">contato@jnasolucoes.com.br</a></li>
+                    <li><i data-lucide="globe"></i><span>Atendimento em todo o Brasil</span></li>
+                    <li><i data-lucide="clock"></i><span>Resposta em até 24h</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="sf-bottom">
+            <div class="container sf-bottom-in">
+                <div>
+                    <strong>&copy; 2026 JNA Soluções. Todos os direitos reservados.</strong>
+                    <small>Este site usa cookies essenciais. Veja a <a href="politica-privacidade.html">Política de Privacidade</a>.</small>
+                </div>
+                <span class="sf-tag">Redes que funcionam.<br>Suporte que responde.</span>
+            </div>
         </div>
     </footer>
 
+    <a href="https://wa.me/5511981439140?text=Olá! Vim pelo site da JNA e gostaria de falar com um especialista." class="wa-float" target="_blank" rel="noopener" aria-label="Falar com a JNA pelo WhatsApp">
+        <i data-lucide="message-circle"></i><span>Fale conosco</span>
+    </a>
+
     <div id="cookie-banner" class="cookie-banner">
         <div class="container cookie-content">
-            <p>Utilizamos cookies essenciais para oferecer a melhor experiência. Ao navegar, você concorda.</p>
+            <p>Utilizamos cookies essenciais para oferecer a melhor experiência. Ao navegar, você concorda. Saiba mais na <a href="politica-privacidade.html" style="color:#7fb3ff;text-decoration:underline;">Política de Privacidade</a>.</p>
             <button id="accept-cookies" class="btn-cookie">Li e aceito</button>
         </div>
     </div>
