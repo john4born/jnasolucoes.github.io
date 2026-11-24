@@ -299,6 +299,9 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
     .cta-premium .btn-primary, .cta-premium .btn-whatsapp-large { display: block; margin: 0 0 12px !important; }
 }
 
+/* Botão do topo nas páginas internas (celular) */
+@media (max-width: 600px) { .navbar .nav-content > .btn-outline { white-space: nowrap; padding: 10px 16px; font-size: 14px; } }
+
 /* REMOVER PROPAGANDA E LINKS DO TRUSTINDEX */
 .ti-footer, .ti-base-link {
     display: none !important;
