@@ -305,6 +305,14 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
 .lp-note { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 22px; background: #fff; border: 1px solid #86EFAC; color: #15803D; font-weight: 800; font-size: 0.9rem; border-radius: 50px; padding: 8px 18px; }
 .lp-note svg { width: 18px; height: 18px; }
 
+/* INTERIOR DE SÃO PAULO — regiões */
+.reg-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.reg-card { background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 20px; padding: 26px; }
+.reg-card h3 { color: var(--dark-blue); font-size: 1.1rem; font-weight: 800; margin-bottom: 14px; }
+.reg-cities { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.reg-cities li { background: #fff; border: 1px solid #E2E8F0; color: var(--dark-blue); font-size: 0.88rem; font-weight: 600; border-radius: 50px; padding: 6px 14px; }
+@media (max-width: 900px) { .reg-grid { grid-template-columns: minmax(0, 1fr); } .reg-card { padding: 22px; } }
+
 /* REMOVER PROPAGANDA E LINKS DO TRUSTINDEX */
 .ti-footer, .ti-base-link {
     display: none !important;
