@@ -302,6 +302,9 @@ h1 { font-size: 56px; font-weight: 900; line-height: 1.05; letter-spacing: -2px;
 /* Botão do topo nas páginas internas (celular) */
 @media (max-width: 600px) { .navbar .nav-content > .btn-outline { white-space: nowrap; padding: 10px 16px; font-size: 14px; } }
 
+.lp-note { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 22px; background: #fff; border: 1px solid #86EFAC; color: #15803D; font-weight: 800; font-size: 0.9rem; border-radius: 50px; padding: 8px 18px; }
+.lp-note svg { width: 18px; height: 18px; }
+
 /* REMOVER PROPAGANDA E LINKS DO TRUSTINDEX */
 .ti-footer, .ti-base-link {
     display: none !important;
